@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="aboutStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-        About Page
+        <div id="menu">
+            <button class="menuButton" id="homeButton" onclick="goToHome()">Home</button>
+            <button class="menuButton" id="aboutButton" onclick="goToAbout()">About</button>
+            <button class="menuButton" id="projectsButton">Projects</button>
+            <div class="projects-content">
+                <a href="#">Smash</a>
+            </div>
+        </div>
+        <div id="about">
+            <h1>About</h1>
+            <div id="info">
+                <p>Connor French is a third-year computer engineering student at California Polytechnic State University.</p>
+            </div>
+        </div>
     </body>
 </html>

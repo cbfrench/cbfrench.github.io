@@ -3,20 +3,22 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div id="menu">
-            <button class="menuButton">Home</button>
-            <button class="menuButton">About</button>
-            <button class="menuButton">Projects</button>
+            <button class="menuButton" id="homeButton">Home</button>
+            <button class="menuButton" id="aboutButton" onclick="goToAbout()">About</button>
+            <button class="menuButton" id="projectsButton">Projects</button>
             <div class="projects-content">
                 <a href="#">Smash</a>
             </div>
             <button class="menuButton">Unknown</button>
         </div>
-        <div id="homeBody">
+        <div id="home">
+            <h1>Welcome to the Personal Website of Connor French</h1>
             <div id="info">
-                <h1>Welcome to the Personal Website of Connor French</h1>
                 <p>This website, along with the projects linked to from one of these pages, are all the original work of Connor French. This is an effort to consolidate projects as well as provide a suitable reference for my proficiency for writing code.
             </div>
         </div>

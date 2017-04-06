@@ -5,7 +5,13 @@ $(document).ready(function(){
 $(function(){
     $("#projectsButton").click(function(){
         $(".dropdown-content").toggle(500);
-        $(".dropdown-content").style.display = "block";
+    });
+});
+$(function(){
+    $("#documentsButton").click(function(){
+        $("body").fadeOut(500);
+        setTimeout(goToDocuments, 500);
+        $(body).style.display = "none";
     });
 });
 $(function(){
@@ -29,6 +35,9 @@ $(function(){
 });
 function goToSmash(){
     window.location.href = "characterSelector";
+}
+function goToDocuments(){
+    window.location.href = "documentsPage.html";
 }
 function goToAbout(){
     window.location.href = "aboutPage.html";

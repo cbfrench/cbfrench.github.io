@@ -8,7 +8,7 @@ body{
     display: none;
 }
 #menu{
-    background: transparent;
+    background: inherit;
     width: 100%;
     height: 5em;
     position: fixed;
@@ -53,7 +53,7 @@ body{
 .dropdown-content:focus{
     outline: none;
 }
-#about{
+#documents{
     background: black;
     width: 100%;
     height: 40em;
@@ -66,10 +66,45 @@ body{
     display: inline-block;
     background: #202020;
     width: 80%;
-    height: 90%;
+    height: 8%;
     padding: 1em;
 }
 #info p{
-    text-align: justify;
-    text-indent: 3em;
+    text-align: center;
+}
+#downloads{
+    margin-top: 1em;
+    background: #202020;
+    width: 80%;
+    display: inline-block;
+    padding: 1em;
+    padding-top: 0em;
+}
+.label{
+    display: inline-block;
+    background: transparent;
+    margin-right: 5em;
+    margin-left: 5em;
+}
+#buttons div{
+    display: inline-block;
+    text-align: center;
+    margin-right: 5em;
+    margin-left: 5em;
+}
+.link a{
+    display: inline-block;
+    background: linear-gradient(#000000, #333333);
+}
+.link button{
+    background: #303030;
+    border: none;
+    color: white;
+    padding: 1em;
+}
+.link button:focus{
+    outline: none;
+}
+.link button:hover{
+    background: #404040;
 }

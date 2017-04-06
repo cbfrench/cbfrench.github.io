@@ -1,6 +1,6 @@
 body{
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     font-family: "Coda", sans-serif;
     margin: 0;
 }
@@ -16,7 +16,7 @@ body{
 }
 .menuButton{
     border: none;
-    background: #202020;
+    background: #0070DF;
     font-size: 1em;
     font-family: "Coda", sans-serif;
     float: left;
@@ -25,7 +25,7 @@ body{
     width: 10em;
 }
 .menuButton:hover{
-    background: #303030;
+    background: #1080EF;
 }
 .menuButton:focus{
     outline: none;
@@ -39,7 +39,7 @@ body{
 .dropdown-content{
     display: none;
     border: none;
-    background: #303030;
+    background: #1080EF;
     font-size: 1em;
     font-family: "Coda", sans-serif;
     float: left;
@@ -48,13 +48,13 @@ body{
     width: 10em;
 }
 .dropdown-content:hover{
-    background: #404040;
+    background: #2090FF;
 }
 .dropdown-content:focus{
     outline: none;
 }
 #home{
-    background: black;
+    background: white;
     width: 100%;
     height: 7em;
     margin-top: 6em;
@@ -64,7 +64,7 @@ body{
 }
 #info{
     display: inline-block;
-    background: #202020;
+    background: #0070DF;
     width: 80%;
     height: 90%;
     padding: 1em;
@@ -73,9 +73,6 @@ body{
     text-align: justify;
     text-indent: 3em;
 }
-
-/*ADDED*/
-
 #options{
     background: rgba(255, 0, 0, .25);
     position: absolute;
@@ -83,7 +80,6 @@ body{
     width: 100%;
     top: 15%;
     text-align: center;
-    display: none;
 }
 #optionMenu{
     background: rgba(0, 0, 255, .75);

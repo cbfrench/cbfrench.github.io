@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $("#wrapper").fadeIn(500);
+});
+
 $(function(){
     $("#projectsButton").click(function(){
         $(".dropdown-content").toggle(500);
@@ -18,6 +22,14 @@ $(function(){
         $(body).style.display = "none";
     });
 });
+$(function(){
+    $("#smash").click(function(){
+        goToSmash();
+    });
+});
+function goToSmash(){
+    window.location.href = "characterSelector";
+}
 function goToAbout(){
     window.location.href = "aboutPage.html";
 }

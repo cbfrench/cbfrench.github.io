@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    $("#wrapper").fadeIn(250);
     style();
+    $("#wrapper").fadeIn(250);
 });
 
 $(document).mouseup(function (e)
@@ -96,6 +96,8 @@ function style(){
             if(sheet.includes("documentsStyle.css")){
                 document.getElementById("style").href = "brightDocumentsStyle.css";
             }
+            document.getElementById("defaultRadio").checked = false;
+            document.getElementById("brightRadio").checked = true;
         }
         else{
             if(sheet.includes("brightStyle.css")){
@@ -107,8 +109,10 @@ function style(){
             if(sheet.includes("brightDocumentsStyle.css")){
                 document.getElementById("style").href = "documentsStyle.css";
             }
+            document.getElementById("brightRadio").checked = false;
+            document.getElementById("defaultRadio").checked = true;
         }
-    }    
+    }   
 }
 function changeToBright(){
     var sheet = document.getElementById("style").href;

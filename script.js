@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("#wrapper").fadeIn(250);
+    style();
 });
 
 $(document).mouseup(function (e)
@@ -82,11 +83,58 @@ $(function(){
         goToSmash();
     });
 });
+function style(){
+    if(localStorage.getItem("bright") != null){
+        var sheet = document.getElementById("style").href;
+        if(localStorage.getItem("bright") == 1){
+            if(sheet.includes("style.css")){
+                document.getElementById("style").href = "brightStyle.css";
+            }
+            if(sheet.includes("aboutStyle.css")){
+                document.getElementById("style").href = "brightAboutStyle.css";
+            }
+            if(sheet.includes("documentsStyle.css")){
+                document.getElementById("style").href = "brightDocumentsStyle.css";
+            }
+        }
+        else{
+            if(sheet.includes("brightStyle.css")){
+                document.getElementById("style").href = "style.css";
+            }
+            if(sheet.includes("brightAboutStyle.css")){
+                document.getElementById("style").href = "aboutStyle.css";
+            }
+            if(sheet.includes("brightDocumentsStyle.css")){
+                document.getElementById("style").href = "documentsStyle.css";
+            }
+        }
+    }    
+}
 function changeToBright(){
-    document.getElementById("style").href = "brightStyle.css";
+    var sheet = document.getElementById("style").href;
+    if(sheet.includes("style.css")){
+        document.getElementById("style").href = "brightStyle.css";
+    }
+    if(sheet.includes("aboutStyle.css")){
+        document.getElementById("style").href = "brightAboutStyle.css";
+    }
+    if(sheet.includes("documentsStyle.css")){
+        document.getElementById("style").href = "brightDocumentsStyle.css";
+    }
+    localStorage.setItem("bright", 1);
 }
 function changeToDefault(){
-    document.getElementById("style").href = "style.css";
+    var sheet = document.getElementById("style").href;
+    if(sheet.includes("brightStyle.css")){
+        document.getElementById("style").href = "style.css";
+    }
+    if(sheet.includes("brightAboutStyle.css")){
+        document.getElementById("style").href = "aboutStyle.css";
+    }
+    if(sheet.includes("brightDocumentsStyle.css")){
+        document.getElementById("style").href = "documentsStyle.css";
+    }
+    localStorage.setItem("bright", 0);
 }
 function goToSmash(){
     window.location.href = "characterSelector";

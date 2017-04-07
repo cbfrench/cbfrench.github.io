@@ -61,6 +61,7 @@ body{
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-family: "Coda", sans-serif;
 }
 #info{
     display: inline-block;
@@ -80,7 +81,7 @@ body{
     position: absolute;
     height: 80%;
     width: 100%;
-    top: 15%;
+    top: 12%;
     text-align: center;
     display: none;
 }

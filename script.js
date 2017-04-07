@@ -12,6 +12,28 @@ $(document).mouseup(function (e)
         container.fadeOut(250);
     }
 });
+
+$(document).mouseup(function (e)
+{
+    var container = $(".dropdown-content");
+
+    if (!container.is(e.target)
+        && container.has(e.target).length === 0 && !$("#projectsButton").is(e.target))
+    {
+        container.fadeOut(250);
+    }
+});
+$(function(){
+    $("#optionClose").click(function(){
+        var op = $("#options");
+        if(op.is(":visible")){
+            op.fadeOut(250);
+        }
+        else{
+            op.fadeIn(250);
+        }
+    });
+});
 $(function(){
     $("#optionsButton").click(function(){
         var op = $("#options");

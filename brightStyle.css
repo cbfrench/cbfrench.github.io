@@ -8,7 +8,7 @@ body{
     display: none;
 }
 #menu{
-    background: inherit;
+    background: #0050BF;
     width: 100%;
     height: 5em;
     position: fixed;

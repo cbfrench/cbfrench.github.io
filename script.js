@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    style();
+    //style();
     $("#wrapper").fadeIn(250);
 });
 

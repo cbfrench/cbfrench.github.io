@@ -85,28 +85,28 @@ $(function(){
 });
 function style(){
     if(localStorage.getItem("bright") != null){
-        var sheet = document.getElementById("style").href;
+        var page = window.location.href;
         if(localStorage.getItem("bright") == 1){
-            if(sheet.includes("style.css")){
+            if(page.includes("index.html")){
                 document.getElementById("style").href = "brightStyle.css";
             }
-            if(sheet.includes("aboutStyle.css")){
+            if(page.includes("aboutPage.html")){
                 document.getElementById("style").href = "brightAboutStyle.css";
             }
-            if(sheet.includes("documentsStyle.css")){
+            if(page.includes("documentsPage.html")){
                 document.getElementById("style").href = "brightDocumentsStyle.css";
             }
             document.getElementById("defaultRadio").checked = false;
             document.getElementById("brightRadio").checked = true;
         }
         else{
-            if(sheet.includes("brightStyle.css")){
+            if(page.includes("index.html")){
                 document.getElementById("style").href = "style.css";
             }
-            if(sheet.includes("brightAboutStyle.css")){
+            if(page.includes("aboutPage.html")){
                 document.getElementById("style").href = "aboutStyle.css";
             }
-            if(sheet.includes("brightDocumentsStyle.css")){
+            if(page.includes("documentsPage.html")){
                 document.getElementById("style").href = "documentsStyle.css";
             }
             document.getElementById("brightRadio").checked = false;

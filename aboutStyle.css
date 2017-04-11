@@ -8,8 +8,9 @@ body{
     display: none;
 }
 #menu{
-    background: transparent;
+    background: absolute;
     width: 100%;
+    min-width: 50em;
     height: 5em;
     position: fixed;
     top: 0;
@@ -67,6 +68,7 @@ body{
     background: #303030;
     width: 80%;
     height: 90%;
+    min-width: 50em;
     padding: 1em;
 }
 #info p{

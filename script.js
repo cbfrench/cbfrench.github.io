@@ -3,14 +3,15 @@ $(document).ready(function(){
     $("#wrapper").fadeIn(250);
 });
 
+
 $(document).mouseup(function (e)
 {
-    var container = $("#options");
+    var container = $("#optionMenu");
 
     if (!container.is(e.target)
         && container.has(e.target).length === 0 && !$("#optionsButton").is(e.target))
     {
-        container.fadeOut(250);
+        $("#options").fadeOut(250);
     }
 });
 
@@ -81,6 +82,11 @@ $(function(){
 $(function(){
     $("#smash").click(function(){
         goToSmash();
+    });
+});
+$(function(){
+    $("#allsafe").click(function(){
+        window.location = "http://www.allsafeselfstorage.com";
     });
 });
 function style(){

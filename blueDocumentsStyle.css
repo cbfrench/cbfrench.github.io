@@ -10,8 +10,9 @@ body{
 #menu{
     background: #0050BF;
     width: 100%;
+    min-width: 50em;
     height: 5em;
-    position: fixed;
+    position: absolute;
     top: 0;
 }
 .menuButton{
@@ -68,6 +69,7 @@ body{
     display: inline-block;
     background: #0050BF;
     width: 80%;
+    min-width: 50em;
     height: 8%;
     padding: 1em;
 }
@@ -78,6 +80,7 @@ body{
     margin-top: 1em;
     background: #0050BF;
     width: 80%;
+    min-width: 50em;
     display: inline-block;
     padding: 1em;
     padding-top: 0em;
@@ -126,6 +129,7 @@ body{
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
+    box-shadow: 0 0 1em black;
 }
 #buttonContainer{
     padding: 1em;

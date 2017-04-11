@@ -1,6 +1,6 @@
 body{
     background: white;
-    color: black;
+    color: white;
     font-family: "Coda", sans-serif;
     margin: 0;
 }
@@ -10,8 +10,9 @@ body{
 #menu{
     background: #0050BF;
     width: 100%;
+    min-width: 50em;
     height: 5em;
-    position: fixed;
+    position: absolute;
     top: 0;
 }
 .menuButton{
@@ -48,13 +49,14 @@ body{
     width: 10em;
 }
 .dropdown-content:hover{
-    background: #2090FF;
+    background: #0290FF;
 }
 .dropdown-content:focus{
     outline: none;
 }
-#home{
-    background: white;
+#about{
+    background: inherit;
+    color: black;
     width: 100%;
     height: 7em;
     margin-top: 6em;
@@ -63,17 +65,20 @@ body{
     padding-bottom: 1em;
 }
 #info{
-    display: inline-block;
     color: white;
+    display: inline-block;
     background: #0050BF;
     width: 80%;
+    min-width: 50em;
     height: 90%;
     padding: 1em;
 }
 #info p{
-    text-align: justify;
-    text-indent: 3em;
+    /*text-align: justify;
+    text-indent: 3em;*/
+    text-align: center;
 }
+
 #options{
     position: absolute;
     height: 80%;
@@ -89,7 +94,7 @@ body{
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
-    color: white;
+    box-shadow: 0 0 1em black;
 }
 #buttonContainer{
     padding: 1em;
@@ -102,7 +107,7 @@ body{
     padding: 1em;
 }
 #optionClose:hover{
-    background: #2090FF;
+    background: #0290FF;
 }
 #optionClose:focus{
     outline: none;

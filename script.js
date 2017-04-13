@@ -89,6 +89,11 @@ $(function(){
         window.location = "http://www.allsafeselfstorage.com";
     });
 });
+$(function(){
+    $("#sleepAid").click(function(){
+        goToSleep();
+    });
+});
 function style(){
     if(localStorage.getItem("bright") != null){
         var page = window.location.href;
@@ -145,6 +150,9 @@ function changeToDefault(){
         document.getElementById("style").href = "documentsStyle.css";
     }
     localStorage.setItem("bright", 0);
+}
+function goToSleep(){
+    window.location.href = "sleepAid";
 }
 function goToSmash(){
     window.location.href = "characterSelector";

@@ -108,6 +108,7 @@ body{
 }
 #optionClose:hover{
     background: #0290FF;
+    box-shadow: 0 0 1em black;
 }
 #optionClose:focus{
     outline: none;

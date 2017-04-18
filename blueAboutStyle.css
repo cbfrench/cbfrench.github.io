@@ -81,6 +81,8 @@ body{
 #info p:nth-child(2){
     margin-top: 2em;
     color: #CCCCCC;
+    text-indent: 0em;
+    text-align: center;
 }
 
 strong{

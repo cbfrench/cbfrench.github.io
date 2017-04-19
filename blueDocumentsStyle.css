@@ -150,3 +150,12 @@ body{
 #optionClose:focus{
     outline: none;
 }
+#copyright{
+    background: #0050BF;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+

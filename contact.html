@@ -5,7 +5,13 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="script.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+        $('#gform').on('submit', function(e) {
+            $('#gform *').fadeOut(2000);
+            $('#gform').prepend('Your submission has been processed...');
+        });
+        </script>
     </head>
     <body>
         <div id="banner">
@@ -42,12 +48,19 @@
             <p>If you'd like to get in touch with me, please fill out the form below!</p>
         </div>
         <div class="even-content">
-            <form action="http://formspree.io/cbfrench@calpoly.edu" method="POST">
-            Email
-            <input type="email" name="_replyto">
-            Comment
-            <textarea   name="body"></textarea>
-            <input type="submit" value="Send"></form>
+            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeT8ITbfFWohHsbQP5B5MBBuyMTn8UGEw-WKKrYTMnIa-FIOA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                First name<br>
+                <input type="text" name="entry.329605531"><br>
+                Last name<br>
+                <input type="text" name="entry.2066135658">
+                <br>Email<br>
+                <input type="text" name="entry.1133435532">
+                <br>Message<br>
+                <textarea name="entry.2058179865" cols="40" rows="8"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
         </div>
         <div id="footer">
             <p>&copy;2017 Connor French | All Rights Reserved. | cbfrench@calpoly.edu</p>

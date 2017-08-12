@@ -190,6 +190,9 @@ h1{
     background-color: var(--menu-button-hover-color);
 }
 
+#gform p{
+    margin: 1rem 0 0 0;
+}
 
 
 

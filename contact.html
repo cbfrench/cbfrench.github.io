@@ -29,6 +29,11 @@
                     <p>Resume</p>
                 </a>
             </div>
+            <div class="menu-button">
+                <a href="contact.html">
+                    <p>Contact</p>
+                </a>
+            </div>
         </div>
         <div id="header">
             <h1>Contact</h1>
@@ -37,16 +42,12 @@
             <p>If you'd like to get in touch with me, please fill out the form below!</p>
         </div>
         <div class="even-content">
-            <form action="mailto:cbfrench@calpoly.edu.com" method="post" enctype="text/plain">
-            Name:<br>
-            <input type="text" name="name"><br>
-            E-mail:<br>
-            <input type="text" name="mail"><br>
-            Comment:<br>
-            <input type="text" name="comment" size="50"><br><br>
-            <input type="submit" value="Send">
-            <input type="reset" value="Reset">
-            </form>
+            <form action="http://formspree.io/cbfrench@calpoly.edu" method="POST">
+            Email
+            <input type="email" name="_replyto">
+            Comment
+            <textarea   name="body"></textarea>
+            <input type="submit" value="Send"></form>
         </div>
         <div id="footer">
             <p>&copy;2017 Connor French | All Rights Reserved. | cbfrench@calpoly.edu</p>

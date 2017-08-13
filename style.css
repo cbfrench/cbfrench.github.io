@@ -81,6 +81,7 @@ a:hover{
     height: 10rem;
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 10rem, 0 8rem);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 10rem, 0 8rem);
     font-size: 1.5rem;
 }
 
@@ -112,11 +113,13 @@ h1{
     width: 100%;
     height: 27.5rem;
     clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
     padding-top: 5rem;
 }
 
 .continue-even{
     clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 22rem);
+    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 22rem);
     height: 15rem;
     padding-bottom: 5rem;
 }

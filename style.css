@@ -161,6 +161,7 @@ h1{
 .multi-even-content{
     background-color: var(--main-background-color);
     clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
+    -webkit-clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
     padding: 4rem 1rem 5rem 1rem;
 }
 

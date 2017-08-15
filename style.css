@@ -1,5 +1,3 @@
-
-/* MAIN VARIABLES */
 :root{
     --main-color: #5b1020;
     --main-background-color: #e4e4e4;
@@ -33,6 +31,12 @@ a{
 
 a:hover{
     color: var(--main-color);
+}
+
+.site-container{
+    max-width: 1200px;
+    margin: auto;
+    background-color: inherit;
 }
 
 /* MENU */
@@ -80,8 +84,6 @@ a:hover{
     margin-top: 5rem;
     height: 10rem;
     text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 10rem, 0 8rem);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 10rem, 0 8rem);
     font-size: 1.5rem;
 }
 
@@ -93,17 +95,13 @@ h1{
 }
 
 .odd-content{
-    margin: 1rem 0rem;
+    margin: 1rem 0;
     text-align: justify;
     width: 100%;
 }
 
-.odd-content p, .continue-even p, .odd-content h1, .continue-even h1{
-    padding: 0 2rem;
-}
-
-.odd-content h1, .continue-even h1{
-    text-align: left;
+.odd-content p{
+    margin: 0 1rem;
 }
 
 .even-content{
@@ -112,21 +110,19 @@ h1{
     background-color: var(--main-background-color);
     width: 100%;
     height: 27.5rem;
-    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 80%);
+    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 80%);
     padding-top: 5rem;
 }
 
-.continue-even{
-    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 22rem);
-    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 22rem);
-    height: 15rem;
-    padding-bottom: 5rem;
+.even-content p{
+    margin: 0 1rem;
 }
 
-.continue-odd{
-    height: 20rem;
-}   
+.even-content.last{
+    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+}
 
 #footer{
     position: fixed;
@@ -142,7 +138,36 @@ h1{
     padding: 1rem 0;
 }
 
+/* ABOUT */
+.photo-section{
+    margin: 1rem 0rem;
+    text-align: center;
+    background-color: var(--main-background-color);
+    width: 100%;
+    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+    height: 40rem;
+    background: var(--main-background-color) url('pictures/connor-about.jpg'); 
+    background-position: center top; 
+    background-size: 600px; 
+    background-repeat: no-repeat;
+}
+
 /* PROJECTS */
+.multi-odd-content{
+    padding: 0 1rem 2rem 1rem;
+}
+
+.multi-even-content{
+    background-color: var(--main-background-color);
+    clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
+    padding: 4rem 1rem 5rem 1rem;
+}
+
+.last-project{
+    padding-bottom: 8rem;
+}
+
 .project-button-container{
     margin-top: 2rem;
     text-align: center;
@@ -193,24 +218,36 @@ h1{
     background-color: var(--menu-button-hover-color);
 }
 
-#gform p{
-    margin: 1rem 0 0 0;
-}
-
 /* DOCUMENTS */
 .document-view{
     width: 50%;
     height: 50rem;
 }
 
+/* CONTACT */
+.contact{
+    text-align: center;
+    padding-bottom: 15rem;
+}
 
+#gform p{
+    margin: 1rem 0 0 0;
+    font-size: calc(var(--font-size) * 1.5);
+}
 
+input[type="text"]{
+    font-size: calc(var(--font-size) * 1.5);
+    font-family: var(--font-family);
+}
 
+textarea{
+    font-family: var(--font-family);
+    font-size: calc(var(--font-sie) * 1.5);
+}
 
-
-
-
-
-
-
-
+/* PHONE LAYOUT */
+@media only screen and (max-width: 400px){
+    .site-container p{
+        font-size: calc(var(--font-size) * 1.5);
+    }
+} 

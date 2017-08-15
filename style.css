@@ -250,5 +250,6 @@ textarea{
 @media screen and (max-width: 600px){
     .site-container p{
         font-size: calc(var(--font-size) * 1.5);
+        color: red;
     }
 } 

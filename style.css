@@ -251,4 +251,7 @@ textarea{
     .site-container p{
         font-size: calc(var(--font-size) * 1.5);
     }
+    .multi-even-content{
+        padding: 4rem 1rem 7rem 1rem;
+    }
 } 

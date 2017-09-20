@@ -331,3 +331,25 @@ textarea{
         position: fixed;
     }
 } 
+
+@media only screen and (max-device-width: 768px){
+    .site-container p{
+        font-size: calc(var(--font-size) * 1.5);
+    }
+    .multi-even-content{
+        padding: 4rem 1rem 7rem 1rem;
+    }
+    .lines, #phone-menu-button{
+        display: block;
+    }
+    #phone-menu-button{
+        position: fixed;
+        right: 0;
+    }
+    .menu-button{
+        display: none;
+    }
+    #banner{
+        position: fixed;
+    }
+} 

@@ -13,5 +13,5 @@ $(document).ready(function(){
         else{
             $("#phone-menu").fadeOut(300);
         }
-    });
+    }));
 });

@@ -289,7 +289,7 @@ textarea{
 .phone-menu-b{
     width: 90%;
     margin: auto;
-    height: 4rem;
+    height: 8rem;
     background-color: var(--main-color);
     text-transform: uppercase;
     transition: background-color var(--transition-speed);
@@ -310,7 +310,7 @@ textarea{
     padding-top: 1.25rem;
 }
 
-@media only screen and (max-device-width: 768px){
+@media only screen and (max-device-width: 768px), only screen and (max-width: 768px){
     .site-container p{
         font-size: calc(var(--font-size) * 1.5);
     }
@@ -323,11 +323,30 @@ textarea{
     #phone-menu-button{
         position: fixed;
         right: 0;
+        width: 10rem;
+   	    height: 10rem;
+    }
+    #phone-menu{
+        top: 9.9rem;
+        height: 40rem;
+    }
+    .phone-menu-b p{
+        font-size: calc(var(--font-size) * 2.5);
     }
     .menu-button{
         display: none;
     }
     #banner{
         position: fixed;
+        height: 10rem;
+    }
+    .lines{
+        position: relative;
+        width: 7.5rem;
+        height: 1rem;
+        background-color: white;
+        margin: auto;
+        top: 0.5rem;
+        margin-top: 1.5rem;
     }
 } 

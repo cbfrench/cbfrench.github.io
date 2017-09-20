@@ -340,6 +340,9 @@ textarea{
         position: fixed;
         height: 10rem;
     }
+    #header{
+        margin-top: 10rem;
+    }
     .lines{
         position: relative;
         width: 7.5rem;

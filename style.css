@@ -42,6 +42,7 @@ a:hover{
 /* MENU */
 #banner{
     position: absolute;
+    z-index: 9999;
     left: 0; right: 0; top: 0;
     text-align: center;
     background-color: var(--main-color);
@@ -105,6 +106,8 @@ h1{
 }
 
 .even-content{
+    position: relative;
+    z-index: 0;
     margin: 1rem 0rem;
     text-align: justify;
     background-color: var(--main-background-color);
@@ -159,6 +162,8 @@ h1{
 }
 
 .multi-even-content{
+    position: relative;
+    z-index: 0;
     background-color: var(--main-background-color);
     clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
     -webkit-clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
@@ -247,11 +252,82 @@ textarea{
 }
 
 /* PHONE LAYOUT */
+.lines{
+    position: relative;
+    width: 3.25rem;
+    height: 0.5rem;
+    background-color: white;
+    margin: auto;
+    top: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 0px;
+    transition: background-color var(--transition-speed);
+    display: none;
+}
+#phone-menu-button{
+	width: 5rem;
+   	height: 5rem;
+    position: fixed;
+    top: 0;
+    border-radius: 0px;
+    background-color: var(--main-color);
+    transition: background-color var(--transition-speed);
+    display: none;
+}
+#phone-menu-button:hover{
+	background-color: var(--menu-button-hover-color);
+}
+#phone-menu{
+    position: fixed;
+    width: 100%;
+    height: 20rem;
+    background-color: var(--main-color);
+    top: 5rem;
+    color: var(--button-text-color);
+}
+
+.phone-menu-b{
+    width: 90%;
+    margin: auto;
+    height: 4rem;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed);
+}
+
+.phone-menu-b:hover{
+    background-color: var(--menu-button-hover-color);
+}
+
+.phone-menu-b a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: var(--button-text-color);
+}
+
+.phone-menu-b p{
+    padding-top: 1.25rem;
+}
+
 @media only screen and (max-width: 600px){
     .site-container p{
         font-size: calc(var(--font-size) * 1.5);
     }
     .multi-even-content{
         padding: 4rem 1rem 7rem 1rem;
+    }
+    .lines, #phone-menu-button{
+        display: block;
+    }
+    #phone-menu-button{
+        position: fixed;
+        right: 0;
+    }
+    .menu-button{
+        display: none;
+    }
+    #banner{
+        position: fixed;
     }
 } 

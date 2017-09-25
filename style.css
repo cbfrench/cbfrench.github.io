@@ -354,4 +354,7 @@ textarea{
         top: 0.5rem;
         margin-top: 1.5rem;
     }
+    p{
+        font-size: calc(var(--font-size) * 1.5);
+    }
 } 

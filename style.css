@@ -280,19 +280,20 @@ textarea{
 #phone-menu{
     position: fixed;
     width: 100%;
-    height: 20rem;
+    height: 40rem;
     background-color: var(--main-color);
     top: 5rem;
     color: var(--button-text-color);
 }
 
 .phone-menu-b{
-    width: 90%;
+    width: 100%;
     margin: auto;
     height: 8rem;
     background-color: var(--main-color);
     text-transform: uppercase;
     transition: background-color var(--transition-speed);
+    margin-top: 5rem;
 }
 
 .phone-menu-b:hover{
@@ -310,7 +311,7 @@ textarea{
     padding-top: 1.25rem;
 }
 
-@media only screen and (max-device-width: 768px), only screen and (max-width: 768px){
+@media only screen and (max-device-width: 768px){
     .site-container p{
         font-size: calc(var(--font-size) * 1.5);
     }
@@ -325,6 +326,7 @@ textarea{
         right: 0;
         width: 10rem;
    	    height: 10rem;
+        margin-bottom: 1rem;
     }
     #phone-menu{
         top: 9.9rem;

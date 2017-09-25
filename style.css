@@ -293,7 +293,7 @@ textarea{
     background-color: var(--main-color);
     text-transform: uppercase;
     transition: background-color var(--transition-speed);
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .phone-menu-b:hover{

@@ -248,7 +248,7 @@ h3{
 
 @media only screen and (max-width: 400px){
     .contact{
-        height: 60rem !important;
+        height: 70rem !important;
         padding-top: 7rem !important;
         margin-top: -7rem !important;
     }    

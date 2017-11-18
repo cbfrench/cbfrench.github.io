@@ -1,93 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contact</title>
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:100,200,300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="newStyle.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <script type="text/javascript">var submitted=false;</script>
-        <script type="text/javascript">
-        $('#gform').on('submit', function(e) {
-            $('#gform *').fadeOut(2000);
-            $('#gform').prepend('Your submission has been processed...');
-        });
-        function formSubmit(){
-            setTimeout(function(){
-                window.location.href = "contact-thanks.html";
-            }, 1000);
-        }
-        </script>
     </head>
     <body>
-        <div id="banner">
-            <div class="menu-button">
-                <a href="index.html">
-                    <p>Home</p>
-                </a>
+        <div id="header">
+            <div class="menu-button" href="#">
+                <a href="inprogress.html">Home</a>
             </div>
             <div class="menu-button">
-                <a href="about.html">
-                    <p>About</p>
-                </a>
+                <a href="inprogressprojects.html">Projects</a>
             </div>
             <div class="menu-button">
-                <a href="projects.html">
-                    <p>Projects</p>
-                </a>
+                <a href="inprogressresume.html">Resume</a>
             </div>
             <div class="menu-button">
-                <a href="resume.html">
-                    <p>Resume</p>
-                </a>
-            </div>
-            <div class="menu-button">
-                <a href="contact.html">
-                    <p>Contact</p>
-                </a>
-            </div>
-            <div id="phone-menu-button">
-                <div class="lines"></div>
-                <div class="lines"></div>
-                <div class="lines"></div>            
-            </div>
-            <div id="phone-menu" style="display: none;">
-                <div class="phone-menu-b">
-                    <a href="index.html">
-                        <p>Home</p>
-                    </a>
-                </div>
-                <div class="phone-menu-b">
-                    <a href="about.html">
-                        <p>About</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="projects.html">                    
-                        <p>Projects</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="resume.html">
-                        <p>Resume</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="contact.html">
-                        <p>Contact</p>
-                    </a>
-                </div>                 
+                <a href="inprogresscontact.html">Contact</a>
             </div>
         </div>
-        <div id="header">
+        <div id="section-1">
             <h1>Contact</h1>
         </div>
-        <div class="site-container">
-            <div class="odd-content">
-                <p>If you'd like to get in touch with me, please fill out the form below!</p>
-            </div>
-            <div class="even-content last contact">
-                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeT8ITbfFWohHsbQP5B5MBBuyMTn8UGEw-WKKrYTMnIa-FIOA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+        <div id="section-2" class="even contact">
+            <h2>Please use the form below if you'd like to get in touch with me!</h2>
+            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeT8ITbfFWohHsbQP5B5MBBuyMTn8UGEw-WKKrYTMnIa-FIOA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                     <p>First Name</p>
                     <input type="text" name="entry.329605531"><br>
                     <p>Last Name</p>
@@ -100,10 +38,21 @@
                     <input type="submit" class="download" value="Submit" style="border-width: 0px; margin-top: 2rem;" onclick="formSubmit();">
                 </form>
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
-            </div>
         </div>
         <div id="footer">
-            <p>&copy;2017 Connor French | All Rights Reserved. | cbfrench@calpoly.edu</p>
+            <div class="empty" style="float: left;"></div>
+            <div id="left-footer">
+                <img src="pictures/connor-about.jpg" />
+            </div>
+            <div class="empty" style="float: right;"></div>
+            <div id="right-footer">
+                <p>Connor French</p>
+                <a href="mailto:cbfrench@calpoly.edu">cbfrench@calpoly.edu</a>
+                <br>
+                <a href="tel:9254825219">(925) 482-5219</a>
+            </div>
+        </div>
+        <div id="small-footer">&copy;2017 Connor French. All Rights Reserved.</div>  
         </div>
     </body>
 </html>

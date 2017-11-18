@@ -1,85 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Resume</title>
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:100,200,300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="newStyle.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="script.js"></script>
     </head>
     <body>
-        <div id="banner">
-            <div class="menu-button">
-                <a href="index.html">
-                    <p>Home</p>
-                </a>
+        <div id="header">
+            <div class="menu-button" href="#">
+                <a href="inprogress.html">Home</a>
             </div>
             <div class="menu-button">
-                <a href="about.html">
-                    <p>About</p>
-                </a>
+                <a href="inprogressprojects.html">Projects</a>
             </div>
             <div class="menu-button">
-                <a href="projects.html">
-                    <p>Projects</p>
-                </a>
+                <a href="inprogressresume.html">Resume</a>
             </div>
             <div class="menu-button">
-                <a href="resume.html">
-                    <p>Resume</p>
-                </a>
-            </div>
-            <div class="menu-button">
-                <a href="contact.html">
-                    <p>Contact</p>
-                </a>
-            </div>
-            <div id="phone-menu-button">
-                <div class="lines"></div>
-                <div class="lines"></div>
-                <div class="lines"></div>            
-            </div>
-            <div id="phone-menu" style="display: none;">
-                <div class="phone-menu-b">
-                    <a href="index.html">
-                        <p>Home</p>
-                    </a>
-                </div>
-                <div class="phone-menu-b">
-                    <a href="about.html">
-                        <p>About</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="projects.html">                    
-                        <p>Projects</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="resume.html">
-                        <p>Resume</p>
-                    </a>
-                </div>     
-                <div class="phone-menu-b">
-                    <a href="contact.html">
-                        <p>Contact</p>
-                    </a>
-                </div>                 
+                <a href="inprogresscontact.html">Contact</a>
             </div>
         </div>
-        <div id="header">
+        <div id="section-1">
             <h1>Resume</h1>
         </div>
-        <div class="site-container">
-            <div class="odd-content" style="text-align: center;">
-                <embed class="document-view" src="ConnorFrenchResume.pdf" type='application/pdf'>
-            </div>
-            <div class="even-content last" style="text-align: center;">
-                <a href="ConnorFrenchResume.pdf" class="download" download="Connor-French-Resume">Download Resume</a>
+        <div id="section-2" class="even resume">
+            <h2>For those who need to see my qualifications</h2>
+            <div class="project-link">
+                <a href="ConnorFrenchResume.pdf" target="_blank">Check It Out</a>
             </div>
         </div>
         <div id="footer">
-            <p>&copy;2017 Connor French | All Rights Reserved. | cbfrench@calpoly.edu</p>
+            <div class="empty" style="float: left;"></div>
+            <div id="left-footer">
+                <img src="pictures/connor-about.jpg" />
+            </div>
+            <div class="empty" style="float: right;"></div>
+            <div id="right-footer">
+                <p>Connor French</p>
+                <a href="mailto:cbfrench@calpoly.edu">cbfrench@calpoly.edu</a>
+                <br>
+                <a href="tel:9254825219">(925) 482-5219</a>
+            </div>
+        </div>
+        <div id="small-footer">&copy;2017 Connor French. All Rights Reserved.</div>  
         </div>
     </body>
 </html>

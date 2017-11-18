@@ -1,359 +1,265 @@
 :root{
-    --main-color: #5b1020;
-    --main-background-color: #e4e4e4;
-    --menu-button-hover-color: #9b5060;
-    --main-text-color: #000000;
-    --secondary-text-color: #ffffff;
-    --link-color: #185490;
-    --button-text-color: #ffffff;
-    --transition-speed: 0.4s;
-    --font-family: Oswald, sans-serif;
-    --font-size: 1rem;
-    --menu-button-number: 4;
+    /*variables go here*/
+    --time: 0.2s;
+    --menu-color: #dd8d00;
+    --menu-hover: #ee9d00;
+    --body-text: #000000;
+    --menu-text: #f3f3f3;
+    --link-hover: #8a2d00;
+    --background: #eeeeee;
+    --footer-color: #0f0f0f;
 }
-
-*{
+body{
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
 }
-
-body{
-    color: var(--main-text-color);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
+p, h1, h2, h3, h4, h5, h6{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
-
 a{
     text-decoration: none;
-    color: var(--link-color);
-    transition: color var(--transition-speed);
 }
 
-a:hover{
-    color: var(--main-color);
-}
-
-.site-container{
-    max-width: 1200px;
-    margin: auto;
-    background-color: inherit;
-}
-
-/* MENU */
-#banner{
-    position: absolute;
-    z-index: 9999;
-    left: 0; right: 0; top: 0;
+#header{
+    background-color: var(--menu-color);
     text-align: center;
-    background-color: var(--main-color);
-    height: 5rem;
 }
-
 .menu-button{
     display: inline-block;
-    width: calc((100% / var(--menu-button-number)) - 5%);
-    height: 100%;
-    position: relative;
-    transition: all var(--transition-speed);
-    letter-spacing: 2px;
-    margin: 0 -0.125rem;
+    height: 4rem;
+    width: 10rem;
+    font-weight: 200;
 }
-
-.menu-button:hover{
-    background-color: var(--menu-button-hover-color);
-    color: yellow;
-}
-
 .menu-button a{
-    display: block;
     height: 100%;
     width: 100%;
-    color: var(--button-text-color);
-}
-
-.menu-button p{
-    position: absolute;
-    top: 2.5rem;
-    left: 50%;
+    display: inline-block;
+    line-height: 4rem;
+    color: var(--menu-text);
     text-transform: uppercase;
-    transform: translate(-50%, -50%);
-}
-
-/* CONTENT */
-#header{
-    background-color: var(--main-background-color);
-    margin-top: 5rem;
-    height: 10rem;
-    text-align: center;
     font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    transition: all var(--time);
 }
-
+.menu-button a:hover{
+    color: var(--link-hover);
+    background-color: var(--menu-hover);
+}
 h1{
-    text-transform: uppercase;
     font-weight: 100;
-    padding-top: 3rem;
-    color: var(--main-color);
+    text-shadow: 2px 2px 2px rgb(200, 100, 0);
+}
+h2{
+    font-weight: 200;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-.odd-content{
-    margin: 1rem 0;
-    text-align: justify;
+h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+#section-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('pictures/code.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
     width: 100%;
+    color: var(--menu-text); 
+    text-align: center;
+    line-height: 40rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
 }
 
-.odd-content p{
-    margin: 0 1rem;
+.project{
+    padding: 0 2rem 2rem 2rem;
 }
 
-.even-content{
-    position: relative;
-    z-index: 0;
-    margin: 1rem 0rem;
-    text-align: justify;
-    background-color: var(--main-background-color);
-    width: 100%;
-    height: 27.5rem;
-    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 80%);
-    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 80%);
+.even{
+    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+}
+
+#section-2{
+    text-align: center;
+    margin-top: -3rem;
+    background-color: white;
+    padding-top: 5rem;
+    height: 15rem;
+}
+#section-3{
+    text-align: center;
+    background-color: var(--background);
+    height: 20rem;
+    margin-top: -3rem;
     padding-top: 5rem;
 }
-
-.even-content p{
-    margin: 0 1rem;
+#section-4{
+    text-align: center;
+    margin-top: -3rem;
+    background-color: white;
+    padding-top: 5rem;
+    height: 15rem;
 }
-
-.even-content.last{
-    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
+#section-5{
+    text-align: center;
+    background-color: #eeeeee;
+    height: 20rem;
+    margin-top: -3rem;
+    padding-top: 5rem;
+}
+.project-link{
+    background-color: var(--menu-color);
+    width: 15rem;
+    margin: auto;
+    margin-top: 2rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+}
+.project-link a{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    color: var(--menu-text);
+    border-radius: 0.75rem;
+    transition: all var(--time);
+}
+.project-link a:hover{
+    background-color: var(--menu-hover);
+    color: var(--link-hover);
+}
+.about{
+    padding: 0 2rem;
+}
+.contact{
+    height: 50rem !important;
+    margin-top: -6rem !important;
+}
+.contact input, .contact textarea{
+    line-height: 2rem;
+    font-size: 2rem;
+    background-color: var(--background);
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    resize: none;
+    margin-bottom: 1rem;
+    outline-color: var(--menu-color);
+}
+.contact input[type="submit"]{
+    background-color: var(--menu-color);
+    color: var(--menu-text);
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: all var(--time);
+    text-transform: uppercase;
+}
+.contact input[type="submit"]:hover{
+    background-color: var(--menu-hover);
+    color: var(--link-hover);
+    cursor: pointer;
 }
 
 #footer{
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--main-color);
-    color: var(--secondary-text-color);
-    letter-spacing: 2px;
-}
-
-#footer p{
-    padding: 1rem 0;
-}
-
-/* ABOUT */
-.photo-section{
-    margin: 1rem 0rem;
-    text-align: center;
-    background-color: var(--main-background-color);
-    width: 100%;
-    clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 2rem, 100% 0rem, 100% 100%, 0 100%);
-    height: 40rem;
-    background: var(--main-background-color) url('pictures/connor-about.jpg'); 
-    background-position: center top; 
-    background-size: 600px; 
-    background-repeat: no-repeat;
-}
-
-/* PROJECTS */
-.multi-odd-content{
-    padding: 0 1rem 2rem 1rem;
-}
-
-.multi-even-content{
-    position: relative;
-    z-index: 0;
-    background-color: var(--main-background-color);
-    clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
-    -webkit-clip-path: polygon(0 15%, 100% 0rem, 100% 100%, 0 85%);
-    padding: 4rem 1rem 5rem 1rem;
-}
-
-.last-project{
-    padding-bottom: 8rem;
-}
-
-.project-button-container{
-    margin-top: 2rem;
+    height: 20rem;
+    background: var(--menu-color);
+    background: -webkit-linear-gradient(135deg, var(--menu-color), var(--link-hover));
+    background: -o-linear-gradient(135deg, var(--menu-color), var(--link-hover));
+    background: -moz-linear-gradient(135deg, var(--menu-color), var(--link-hover));
+    background: linear-gradient(135deg, var(--menu-color), var(--link-hover));
+    color: var(--menu-text);
     text-align: center;
 }
 
-.project-button{
-    background-color: var(--main-color);
-    color: var(--secondary-text-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 1rem;
-    border-radius: 5px;
-    transition: background-color var(--transition-speed);
+#left-footer, #right-footer{
+    display: inline-block;
 }
 
-.project-button a{
-    display: block;
+#left-footer a, #right-footer a{
+    color: var(--menu-text);
+    transition: all var(--time);
+}
+
+#left-footer a:hover, #right-footer a:hover{
+    color: var(--menu-color);
+}
+
+.empty{
+    width: 20%;
     height: 100%;
+    display: inline-block;
+}
+
+#left-footer{
+    float: left;
+    width: 30%;
+}
+#right-footer{
+    float: right;
+    padding-top: 2.5rem;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    width: 30%;
+}
+
+#left-footer img{
+    height: 20rem;
+    padding-bottom: 0;
+}
+
+#small-footer{
+    background-color: var(--footer-color);
     width: 100%;
-    color: var(--button-text-color);
-}
-
-.project-button:hover{
-    color: var(--secondary-text-color);
-    background-color: var(--menu-button-hover-color);
-}
-
-/* DOWNLOAD */
-.download{
-    background-color: var(--main-color);
-    color: var(--secondary-text-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 1rem;
-    border-radius: 5px;
-    transition: background-color var(--transition-speed);
-}
-
-.download a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: var(--button-text-color);
-}
-
-.download:hover{
-    color: var(--secondary-text-color);
-    background-color: var(--menu-button-hover-color);
-}
-
-/* DOCUMENTS */
-.document-view{
-    width: 50%;
-    height: 50rem;
-}
-
-/* CONTACT */
-.contact{
+    height: 3rem;
+    color: var(--menu-text);
+    line-height: 3rem;
     text-align: center;
-    padding-bottom: 15rem;
+    position: absolute;
+    font-weight: 200;
 }
 
-#gform p{
-    margin: 1rem 0 0 0;
-    font-size: calc(var(--font-size) * 1.5);
+@media only screen and (max-width: 800px){
+    .empty{
+        width: 10%;
+    }
+    textarea{
+        width: 70%;
+    }
 }
 
-input[type="text"]{
-    font-size: calc(var(--font-size) * 1.5);
-    font-family: var(--font-family);
-}
+@media only screen and (max-width: 400px){
+    .contact{
+        height: 60rem !important;
+        padding-top: 7rem !important;
+        margin-top: -7rem !important;
+    }    
+    .empty{
+        width: 0;
+    }
+    #right-footer{
+        font-size: 0.8rem;
+    }
+}   
 
-textarea{
-    font-family: var(--font-family);
-    font-size: calc(var(--font-sie) * 1.5);
-}
 
-/* PHONE LAYOUT */
-.lines{
-    position: relative;
-    width: 3.25rem;
-    height: 0.5rem;
-    background-color: white;
-    margin: auto;
-    top: 0.75rem;
-    margin-top: 0.5rem;
-    border-radius: 0px;
-    transition: background-color var(--transition-speed);
-    display: none;
-}
-#phone-menu-button{
-	width: 5rem;
-   	height: 5rem;
-    position: fixed;
-    top: 0;
-    border-radius: 0px;
-    background-color: var(--main-color);
-    transition: background-color var(--transition-speed);
-    display: none;
-}
-#phone-menu-button:hover{
-	background-color: var(--menu-button-hover-color);
-}
-#phone-menu{
-    position: fixed;
-    width: 100%;
-    height: 50rem;
-    background-color: var(--main-color);
-    top: 5rem;
-    color: var(--button-text-color);
-}
 
-.phone-menu-b{
-    width: 100%;
-    margin: auto;
-    height: 8rem;
-    background-color: var(--main-color);
-    text-transform: uppercase;
-    transition: background-color var(--transition-speed);
-    margin-top: 2rem;
-}
 
-.phone-menu-b:hover{
-    background-color: var(--menu-button-hover-color);
-}
 
-.phone-menu-b a{
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: var(--button-text-color);
-}
-
-.phone-menu-b p{
-    padding-top: 1.25rem;
-}
-
-@media only screen and (max-device-width: 768px){
-    .site-container p{
-        font-size: calc(var(--font-size) * 1.5);
-    }
-    .multi-even-content{
-        padding: 4rem 1rem 7rem 1rem;
-    }
-    .lines, #phone-menu-button{
-        display: block;
-    }
-    #phone-menu-button{
-        position: fixed;
-        right: 0;
-        width: 10rem;
-   	    height: 10rem;
-        margin-bottom: 1rem;
-    }
-    #phone-menu{
-        top: 9.9rem;
-    }
-    .phone-menu-b p{
-        font-size: calc(var(--font-size) * 2.5);
-    }
-    .menu-button{
-        display: none;
-    }
-    #banner{
-        position: fixed;
-        height: 10rem;
-    }
-    #header{
-        margin-top: 10rem;
-    }
-    .lines{
-        position: relative;
-        width: 7.5rem;
-        height: 1rem;
-        background-color: white;
-        margin: auto;
-        top: 0.5rem;
-        margin-top: 1.5rem;
-    }
-    p{
-        font-size: calc(var(--font-size) * 1.5);
-    }
-} 

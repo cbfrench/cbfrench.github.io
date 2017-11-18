@@ -171,6 +171,7 @@ h3{
     border-radius: .5rem;
     transition: all var(--time);
     text-transform: uppercase;
+    -webkit-appearance: none;
 }
 .contact input[type="submit"]:hover{
     background-color: var(--menu-hover);

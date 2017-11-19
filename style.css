@@ -156,8 +156,9 @@ h3{
     padding: 0 2rem;
 }
 .contact{
-    height: 70rem !important;
+    height: 60rem !important;
     margin-top: -8rem !important;
+    padding-top: 12rem !important;
 }
 .contact input, .contact textarea{
     line-height: 2rem;
@@ -175,7 +176,8 @@ h3{
     color: var(--menu-text);
     font-family: "Oswald", sans-serif;
     font-weight: 200;
-    padding: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
     border-radius: .5rem;
     transition: all var(--time);
     text-transform: uppercase;

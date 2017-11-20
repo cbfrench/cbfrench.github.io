@@ -6,6 +6,18 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald:100,200,300,400" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript">var submitted=false;</script>
+        <script type="text/javascript">
+            $('#gform').on('submit', function(e) {
+                $('#gform *').fadeOut(2000);
+                $('#gform').prepend('Your submission has been processed...');
+            });
+            function formSubmit(){
+                setTimeout(function(){
+                    window.location.href = "contact-thanks.html";
+                }, 1000);
+            }
+        </script>
     </head>
     <body>
         <div id="header">

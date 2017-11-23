@@ -146,6 +146,13 @@ h4{
     padding-top: 5rem;
     height: 15rem;
 }
+#section-7{
+    text-align: center;
+    background-color: #eeeeee;
+    height: 20rem;
+    margin-top: -3rem;
+    padding-top: 5rem;
+}
 .project-link{
     background-color: var(--menu-color);
     width: 15rem;

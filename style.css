@@ -104,11 +104,11 @@ h4{
     padding-top: 5rem;
     height: 15rem;
 }
-#section-2 a{
+#section-2.project a{
     color: var(--link-hover);
     transition: all var(--time);
 }
-#section-2 a:hover{
+#section-2.project a:hover{
     color: var(--menu-color);
 }
 #section-2-contact{

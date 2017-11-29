@@ -292,6 +292,8 @@ h4{
     }
     #section-1{
         background-position: bottom;
+        background-size: contain;
+        background-repeat: unset;
     }
     #section-3, #section-5{
         height: 30rem;

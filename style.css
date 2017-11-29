@@ -230,7 +230,7 @@ h4{
 }
 
 #left-footer a:hover, #right-footer a:hover{
-    color: var(--menu-color);
+    color: var(--link-hover);
 }
 
 .empty{

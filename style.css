@@ -52,8 +52,11 @@ a{
 }
 h1{
     font-weight: 100;
-    text-shadow: 4px 2px 2px rgb(200, 100, 0);
+    background-color: rgba(221, 141, 0, 0.9);
     font-size: 6rem;
+    margin: auto;
+    margin-top: -6rem;
+    width: 30rem;
 }
 h2{
     font-weight: 200;
@@ -74,15 +77,15 @@ h4{
 }
 
 #section-1{
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)), url('pictures/code.jpg');
+    padding-top: 20rem;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('pictures/code.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 40rem;
+    height: 20rem;
     width: 100%;
     color: var(--menu-text); 
     text-align: center;
-    line-height: 40rem;
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 0.5rem;
@@ -213,10 +216,6 @@ h4{
 #footer{
     height: 20rem;
     background: var(--menu-color);
-    background: -webkit-linear-gradient(135deg, var(--menu-color), var(--link-hover));
-    background: -o-linear-gradient(135deg, var(--menu-color), var(--link-hover));
-    background: -moz-linear-gradient(135deg, var(--menu-color), var(--link-hover));
-    background: linear-gradient(135deg, var(--menu-color), var(--link-hover));
     color: var(--menu-text);
     text-align: center;
 }
@@ -277,10 +276,14 @@ h4{
     }
     h1{
         font-size: 5rem;
+        width: 25rem;
     } 
 }
 
 @media only screen and (max-width: 400px){   
+    h1{
+        width: 100%;
+    }    
     .empty{
         width: 0;
     }

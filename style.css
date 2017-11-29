@@ -96,8 +96,8 @@ h4{
 }
 
 .even{
-    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
-    -webkit-clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
+    -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
 }
 
 #section-2{
@@ -116,10 +116,10 @@ h4{
 }
 #section-2-contact{
     text-align: center;
-    margin-top: -9rem;
+    margin-top: -3rem;
     background-color: white;
-    padding-top: 12rem;
-    height: 60rem;
+    padding-top: 5rem;
+    height: 50rem;
 }
 #section-3{
     text-align: center;
@@ -278,6 +278,12 @@ h4{
         font-size: 5rem;
         width: 25rem;
     } 
+    #section-2-contact{
+        height: 55rem;
+    }
+    .project{
+        padding: 0 2rem 4rem 2rem;
+    }
 }
 
 @media only screen and (max-width: 400px){   

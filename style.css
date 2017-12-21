@@ -108,12 +108,16 @@ h4{
     -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
 }
 
-#section-2{
-    text-align: center;
+#section-2, #section-4, #section-6{
     margin-top: -3rem;
     background-color: white;
-    padding-top: 5rem;
-    height: 15rem;
+    padding: 5rem 0;
+    text-align: center;
+}
+#section-2 p, #section-3 p, #section-4 p, #section-5 p, #section-6 p, #section-7 p{
+    max-width: 75%;
+    margin: auto;
+    text-align: justify;
 }
 #section-2.project a{
     color: var(--link-hover);
@@ -122,47 +126,11 @@ h4{
 #section-2.project a:hover{
     color: var(--menu-color);
 }
-#section-2-contact{
-    text-align: center;
-    margin-top: -3rem;
-    background-color: white;
-    padding-top: 5rem;
-    height: 50rem;
-}
-#section-3{
+#section-3, #section-5, #section-7{
     text-align: center;
     background-color: var(--background);
-    height: 20rem;
     margin-top: -3rem;
-    padding-top: 5rem;
-}
-#section-4{
-    text-align: center;
-    margin-top: -3rem;
-    background-color: white;
-    padding-top: 5rem;
-    height: 15rem;
-}
-#section-5{
-    text-align: center;
-    background-color: #eeeeee;
-    height: 20rem;
-    margin-top: -3rem;
-    padding-top: 5rem;
-}
-#section-6{
-    text-align: center;
-    margin-top: -3rem;
-    background-color: white;
-    padding-top: 5rem;
-    height: 15rem;
-}
-#section-7{
-    text-align: center;
-    background-color: #eeeeee;
-    height: 20rem;
-    margin-top: -3rem;
-    padding-top: 5rem;
+    padding: 5rem 0;
 }
 .project-link{
     background-color: var(--menu-color);
@@ -191,7 +159,10 @@ h4{
 .about{
     padding: 0 2rem;
 }
-#section-2-contact input, #section-2-contact textarea{
+.contact p{
+    text-align: center !important;
+}
+.contact input, .contact textarea{
     line-height: 2rem;
     font-size: 2rem;
     background-color: var(--background);
@@ -202,7 +173,7 @@ h4{
     margin-bottom: 1rem;
     outline-color: var(--menu-color);
 }
-#section-2-contact input[type="submit"]{
+.contact input[type="submit"]{
     background-color: var(--menu-color);
     color: var(--menu-text);
     font-family: "Oswald", sans-serif;
@@ -215,7 +186,7 @@ h4{
     -webkit-appearance: none;
     cursor: pointer;
 }
-#section-2-contact input[type="submit"]:hover{
+.contact input[type="submit"]:hover{
     background-color: var(--footer-color);
 }
 

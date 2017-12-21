@@ -186,8 +186,7 @@ h4{
     transition: all var(--time);
 }
 .project-link a:hover{
-    background-color: var(--menu-hover);
-    color: var(--link-hover);
+    background-color: var(--footer-color);
 }
 .about{
     padding: 0 2rem;
@@ -238,7 +237,7 @@ h4{
 }
 
 #left-footer a:hover, #right-footer a:hover{
-    color: var(--link-hover);
+    color: var(--footer-color);
 }
 
 .empty{

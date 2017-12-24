@@ -257,14 +257,18 @@ h4{
     } 
 }
 
-@media only screen and (max-width: 400px){   
+@media only screen and (max-width: 415px){   
     h1{
         width: 100%;
     } 
     #logo{
         margin: auto;
         padding: 1rem 7.5rem;
+        width: 6rem;
     }   
+    .menu-button{
+        width: 15rem;
+    }
     .empty{
         width: 0;
     }

@@ -84,7 +84,7 @@ h4{
     font-weight: 400;
 }
 
-#section-1{
+#title{
     padding-top: 20rem;
     background: url('pictures/code.jpg');
     background-repeat: no-repeat;
@@ -107,30 +107,26 @@ h4{
     -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
     -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
 }
-
-#section-2, #section-4, #section-6{
+.section{
     margin-top: -3rem;
-    background-color: white;
     padding: 5rem 0;
     text-align: center;
+    background-color: var(--background);
 }
-#section-2 p, #section-3 p, #section-4 p, #section-5 p, #section-6 p, #section-7 p{
+.section.even{
+    background-color: white;
+}
+.section p{
     max-width: 75%;
     margin: auto;
     text-align: justify;
 }
-#section-2.project a{
+#github-link{
     color: var(--link-hover);
     transition: all var(--time);
 }
-#section-2.project a:hover{
+#github-link:hover{
     color: var(--menu-color);
-}
-#section-3, #section-5, #section-7{
-    text-align: center;
-    background-color: var(--background);
-    margin-top: -3rem;
-    padding: 5rem 0;
 }
 .project-link{
     background-color: var(--menu-color);
@@ -155,9 +151,6 @@ h4{
 }
 .project-link a:hover{
     background-color: var(--footer-color);
-}
-.about{
-    padding: 0 2rem;
 }
 .contact p{
     text-align: center !important;
@@ -272,7 +265,7 @@ h4{
     .empty{
         width: 0;
     }
-    #section-2 p, #section-3 p, #section-4 p, #section-5 p, #section-6 p, #section-7 p{
+    .section p{
         max-width: 90%;
     }
     #right-footer{

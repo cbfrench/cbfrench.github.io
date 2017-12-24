@@ -272,6 +272,9 @@ h4{
     .empty{
         width: 0;
     }
+    #section-2 p, #section-3 p, #section-4 p, #section-5 p, #section-6 p, #section-7 p{
+        max-width: 90%;
+    }
     #right-footer{
         font-size: 0.8rem;
     }

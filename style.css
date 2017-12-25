@@ -90,6 +90,9 @@ h4{
     padding-top: 20rem;
     background: url('pictures/code.jpg');
     background-repeat: no-repeat;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
     height: 20rem;
@@ -140,6 +143,9 @@ h4{
 }
 .about-section{
     background-image: ;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

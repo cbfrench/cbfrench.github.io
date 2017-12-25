@@ -289,6 +289,9 @@ h4{
     .empty{
         width: 0;
     }
+    .about-section, #title{
+        background-attachment: scroll;
+    }
     .section p{
         max-width: var(--mobile-width);
     }

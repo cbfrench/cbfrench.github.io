@@ -106,8 +106,8 @@ h4{
 }
 
 .even{
-    -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
-    -webkit-clip-path: polygon(0 2.5vw, 50% 0, 100% 2.5vw, 100% calc(100% - 2.5vw), 50% 100%, 0 calc(100% - 2.5vw));
+    -webkit-clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));
+    clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));
 }
 .section{
     margin-top: -3rem;
@@ -121,7 +121,7 @@ h4{
 .section p{
     max-width: var(--width);
     margin: auto;
-    text-align: justify;
+    text-align: center;
 }
 .text-box{
     background-color: rgba(221, 141, 0, 0.9);

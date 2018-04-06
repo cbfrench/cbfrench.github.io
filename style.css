@@ -8,6 +8,7 @@
     --menu-text: #f3f3f3;
     --link-hover: #8a2d00;
     --background: #eeeeee;
+    --background2: #dddddd;
     --footer-color: #004880;
     --mobile-width: 90%;
     --width: 75%;
@@ -119,7 +120,7 @@ h4{
     margin-top: -3rem;
     padding: 5rem 0;
     text-align: center;
-    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), white var(--bar-width), white calc(var(--bar-width)*2));
+    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), var(--background2) var(--bar-width), var(--background2) calc(var(--bar-width)*2));
 }
 .section.even{
     background: white;
@@ -145,7 +146,7 @@ h4{
     padding: 0 !important;
 }
 .section.even.space{
-    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), white var(--bar-width), white calc(var(--bar-width)*2));s
+    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), var(--background2) var(--bar-width), var(--background2) calc(var(--bar-width)*2));s
 }
 .about-section{
     background-size: cover;

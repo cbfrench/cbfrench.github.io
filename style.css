@@ -316,12 +316,14 @@ h4{
         width: 25rem;
     }
     #header a{
-        width: 49%;
+        width: 50%;
         display: inline-block;
-        margin-bottom: 2rem;
+        height: 10rem;
     }
     .menu-button a{
+        height: initial !important;
         width: 100% !important;
+        margin-bottom: 2rem;
     }
     .mobile-menu{
         display: inline-block;

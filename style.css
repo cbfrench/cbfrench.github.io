@@ -70,6 +70,7 @@ a{
 h1{
     font-weight: 100;
     background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
     font-size: 6rem;
     margin: auto;
     margin-top: -6rem;
@@ -220,6 +221,7 @@ h4{
 #footer{
     height: 20rem;
     background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
     color: var(--menu-text);
     text-align: center;
 }

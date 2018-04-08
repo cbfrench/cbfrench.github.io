@@ -122,6 +122,7 @@ h4{
     padding: 5rem 0;
     text-align: center;
     background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), var(--background2) var(--bar-width), var(--background2) calc(var(--bar-width)*2));
+    background-attachment: fixed;
 }
 .section.even{
     background: white;
@@ -133,6 +134,7 @@ h4{
 }
 .text-box{
     background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
     color: var(--menu-text);
     padding: 1rem 0;
     max-width: var(--width);
@@ -147,7 +149,8 @@ h4{
     padding: 0 !important;
 }
 .section.even.space{
-    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), var(--background2) var(--bar-width), var(--background2) calc(var(--bar-width)*2));s
+    background: repeating-linear-gradient(var(--angle), var(--background),    var(--background) var(--bar-width), var(--background2) var(--bar-width), var(--background2) calc(var(--bar-width)*2));
+    background-attachment: fixed;
 }
 .about-section{
     background-size: cover;

@@ -480,7 +480,7 @@ h4{
         padding-right: 1rem;
     }
     .readme pre{
-        background: repeating-linear-gradient(var(--background), var(--background) 1rem, var(--background2) 1rem, var(--background2) 2rem);
+        background: repeating-linear-gradient(var(--background), var(--background) 1.1rem, var(--background2) 1.1rem, var(--background2) 2.2rem);
     }
 }   
 

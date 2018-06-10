@@ -36,7 +36,7 @@
         </div>
         <div class="section even">
             <h2>Welcome to my final project for CSC 471 Spring 2018.</h2>
-            <p>Here you'll find all information you'll need, including screenshots, the README, and the source code for the project.</p>
+            <p>Here you'll find all information you'll need, including video milestones, instructions on how to play, the source code for the project, and the README.</p>
         </div>
         <div class="section video">
             <h2>Milestones</h2>
@@ -60,13 +60,143 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+        <div class="section even instructions">
+            <h2>Instructions</h2>
+            <p>Run and jump your way to the end of the level, collecting coins and power-ups along the way. Be careful not to be hit by any enemies or you'll be forced to start over, so make sure you bounce on them first!</p>
+            <h4>Controls</h4>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-button">&uarr;</div>
+                    <p>or</p>
+                    <div class="instruction-button">B</div>
+                    <p>or</p>
+                    <div class="instruction-button">A</div>
+                </div>
+                <div class="i-contain">
+                    <p>JUMP</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-button">&rarr;</div>
+                    <div class="instruction-button">&larr;</div>
+                    <p>or</p>
+                    <div class="instruction-button control-stick"></div>
+                </div>
+                <div class="i-contain">
+                    <p>MOVE</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain">
+                    <div class="instruction-button">+</div>
+                </div>
+                <div class="i-contain">
+                    <p>PAUSE</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-key">R-TRIGGER</div>
+                    <p>and</p>
+                    <div class="instruction-key">L-TRIGGER</div>
+                </div>
+                <div class="i-contain">
+                    <p>NEW GAME</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain">
+                    <div class="instruction-button">-</div>
+                </div>
+                <div class="i-contain">                
+                    <p>END PROGRAM</p>
+                </div>
+            </div>
+            <h4>Keyboard Controls</h4>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-key">&uarr;</div>
+                    <p>or</p>
+                    <div class="instruction-key">SPACE</div>
+                    <p>or</p>
+                    <div class="instruction-key">W</div>
+                </div>
+                <div class="i-contain">                
+                    <p>JUMP</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-key">&larr;</div>
+                    <p>or</p>
+                    <div class="instruction-key">A</div>
+                </div>
+                <div class="i-contain">                
+                    <p>MOVE LEFT</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-key">&rarr;</div>
+                    <p>or</p>
+                    <div class="instruction-key">D</div>
+                </div>
+                <div class="i-contain">                
+                    <p>MOVE RIGHT</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain f">
+                    <div class="instruction-key">R-SHIFT</div>
+                    <p>or</p>
+                    <div class="instruction-key">L-SHIFT</div>
+                </div>                
+                <div class="i-contain">                
+                    <p>RUN</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain">
+                    <div class="instruction-key">P</div>
+                </div>
+                <div class="i-contain">                
+                    <p>PAUSE</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain">
+                    <div class="instruction-key">N</div>
+                </div>
+                <div class="i-contain">
+                    <p>NEW GAME</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="i-contain">
+                    <div class="instruction-key">ESC</div>
+                </div>
+                <div class="i-contain">
+                    <p>END PROGRAM</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Downloadable Files</h2>
+            <div class="project-link">
+                <a href="ConnorFrenchResume.pdf" download>Source Code</a>
+            </div>
+            <div class="project-link">
+                <a href="README.md" download>README</a>
+            </div>
+        </div>
         <div class="section even readme">
             <h2>README</h2>
 <h2><a id="Final_Project_4"></a>Final Project</h2>
 <p>This is the README for my Final Project in CSC 471 Spring 2018. I chose to create an homage to classic Mario platformers with the knowledge I gained during the class.</p>
 <hr>
-<h3><a id="Structs_7"></a>Structs</h3>
-<p>Below are the structs that were utilized throughout the program.</p>
+<h3><a id="Structs_7"></a>Data Structures</h3>
+<p>Below are the data structures that were utilized throughout the program.</p>
 <pre><code>typedef struct platform {
     vec3 p;
     bool onScreen;
@@ -293,15 +423,6 @@
 <p>This function behaves similarly to the <code>keyCallback</code> function except that it takes in all of its input from the XInput controller that has been connected.</p>
 <h5><a id="mainint_argc_char_argv_280"></a><code>main(int argc, char *argv[])</code></h5>
 <p>This function runs the main brunt of the program, running the <code>render</code> function and all of the input functions as well.</p>      
-        </div>
-        <div class="section">
-            <h2>Downloadable Files</h2>
-            <div class="project-link">
-                <a href="ConnorFrenchResume.pdf" download>Source Code</a>
-            </div>
-            <div class="project-link">
-                <a href="README.md" download>README</a>
-            </div>
         </div>
         <div id="footer">
             <div class="empty" style="float: left;"></div>

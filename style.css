@@ -9,6 +9,7 @@
     --link-hover: #8a2d00;
     --background: #eeeeee;
     --background2: #dddddd;
+    --background3: #aaaaaa;
     --footer-color: #004880;
     --mobile-width: 90%;
     --width: 75%;
@@ -292,7 +293,7 @@ h4{
     margin: 1rem 0;
     border: 1px solid transparent;
 }
-.video h4{
+.video h4, .instructions h4{
     font-weight: 300;
     font-size: 1.5rem;
     margin: auto;
@@ -310,6 +311,61 @@ h4{
     width: 90%;
     max-width: 1000px;
     margin-bottom: 2rem;
+}
+.instruction-button{
+    color: black;
+    background: var(--background2);
+    border-radius: 5rem;
+    padding: 0.5rem 1.1rem;
+    width: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 1.5rem;
+    box-shadow: 3px 2px var(--background3);
+    float: right;
+    margin-right: 1rem;
+}
+.control-stick{
+    background: radial-gradient(var(--background2) 1.15rem, var(--background3) 1.3rem, var(--background2) 1.45rem);
+    height: 1rem;
+    padding: 1.1rem;
+}
+.instruction-key{
+    color: black;
+    background: var(--background2);
+    font-weight: 700;
+    padding: 0.5rem 0.85rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    min-width: 1.5rem;
+    box-shadow: 3px 2px var(--background3);
+    float: right;
+    margin-right: 1rem;
+}
+.row p{
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.row .i-contain p{
+    float: left;
+    line-height: 3.4rem;
+}
+.row .i-contain{
+    display: inline-block;
+    width: 49%;
+    height: 3.4rem;
+}
+.row{
+    padding: 1rem 0;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.row .i-contain.f p{
+    float: right;
 }
 
 #footer{
@@ -481,6 +537,29 @@ h4{
     }
     .readme pre{
         background: repeating-linear-gradient(var(--background), var(--background) 1.1rem, var(--background2) 1.1rem, var(--background2) 2.2rem);
+    }
+    .row{
+        max-width: 100%;
+    }
+    .row .i-contain{
+        width: 82.5%;
+    }
+    .row .i-contain .instruction-button, .row .i-contain .instruction-key{
+        float: initial;
+        margin: 0;
+    }
+    .row .i-contain.f .instruction-button, .row .i-contain.f .instruction-key{
+        float: right;
+    }
+    .row .i-contain.f{
+        margin-left: -0rem;
+    }
+    .row .i-contain p{
+        float: initial;
+        text-align: center;
+    }
+    .row .i-contain:nth-last-child(1){
+        margin-left: 0;
     }
 }   
 

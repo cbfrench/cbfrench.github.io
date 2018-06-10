@@ -5,8 +5,8 @@
 ## Final Project
 This is the README for my Final Project in CSC 471 Spring 2018. I chose to create an homage to classic Mario platformers with the knowledge I gained during the class.
 ___
-### Structs
-Below are the structs that were utilized throughout the program.
+### Data Structures
+Below are the data structures that were utilized throughout the program.
 
     typedef struct platform {
 	    vec3 p;

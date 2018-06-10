@@ -479,6 +479,9 @@ h4{
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    .readme pre{
+        background: repeating-linear-gradient(var(--background), var(--background) 1rem, var(--background2) 1rem, var(--background2) 2rem);
+    }
 }   
 
 

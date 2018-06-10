@@ -72,7 +72,7 @@
     bool onScreen;
 }Platform;
 </code></pre>
-<p>The <code>Platform</code> struct is used to store data necessary for keeping track of and drawing the platforms in the game. <code>p</code> stores the left-most point of the platform and <code>onScreen</code> stores whether or not the platform would be currently on screen if it were drawn.</p>
+<p>The <code>Platform</code> struct is used to store data necessary for keeping track of and drawing the <code>Platforms</code> in the game. <code>p</code> stores the left-most point of the <code>Platform</code> and <code>onScreen</code> stores whether or not the <code>Platform</code> would be currently on screen if it were drawn.</p>
 <pre><code>typedef struct enemy {
     vec3 position;
     int platform;
@@ -81,7 +81,7 @@
     float speed;
 }Enemy;
 </code></pre>
-<p>The <code>Enemy</code> struct is used to store data necessary for drawing and updating each of the enemies in the game. <code>position</code> stores the position of the enemy, <code>platform</code> stores which <code>Platform</code> the enemy resides on, <code>alive</code> stores the value of whether or not the enemy has been killed by the player, <code>direction</code> stores which way the enemy is currently facing, and <code>speed</code> stores the ground speed of the enemy.</p>
+<p>The <code>Enemy</code> struct is used to store data necessary for drawing and updating each of the enemies in the game. <code>position</code> stores the position of the <code>Enemy</code>, <code>platform</code> stores which <code>Platform</code> the <code>Enemy</code> resides on, <code>alive</code> stores the value of whether or not the <code>Enemy</code> has been killed by the player, <code>direction</code> stores which way the <code>Enemy</code> is currently facing, and <code>speed</code> stores the ground speed of the <code>Enemy</code>.</p>
 <pre><code>typedef struct powerup {
     vec3 position;
     int platform;
@@ -90,14 +90,14 @@
     float speed;
 }PowerUp;
 </code></pre>
-<p>The <code>PowerUp</code> struct is used to store data necessary for drawing and updating each of the powerups in the game. <code>position</code> stores the position of the powerup, <code>platform</code> stores which <code>Platform</code> the powerup resides on, <code>used</code> stores the value of whether or not the powerup has been used by the player, <code>direction</code> stores which way the powerup is currently facing, and <code>speed</code> stores the ground speed of the powerup.</p>
+<p>The <code>PowerUp</code> struct is used to store data necessary for drawing and updating each of the powerups in the game. <code>position</code> stores the position of the <code>PowerUp</code>, <code>platform</code> stores which <code>Platform</code> the <code>PowerUp</code> resides on, <code>used</code> stores the value of whether or not the <code>PowerUp</code> has been used by the player, <code>direction</code> stores which way the <code>PowerUp</code> is currently facing, and <code>speed</code> stores the ground speed of the <code>PowerUp</code>.</p>
 <pre><code>typedef struct coin {
     vec3 position;
     int platform;
     bool grabbed;
 }Coin;
 </code></pre>
-<p>The <code>Coin</code> struct is used to store data necessary for drawing and updating each of the coins in the game. <code>position</code> stores the position of each coin, ‘platform’ stores which <code>Platform</code> the coin is on, and <code>grabbed</code> stores whether or not the coin has been grabbed by the player.</p>
+<p>The <code>Coin</code> struct is used to store data necessary for drawing and updating each of the coins in the game. <code>position</code> stores the position of each <code>Coin</code>, ‘platform’ stores which <code>Platform</code> the <code>Coin</code> is on, and <code>grabbed</code> stores whether or not the <code>Coin</code> has been grabbed by the player.</p>
 <hr>
 <h3><a id="Variables_42"></a>Variables</h3>
 <p>Below are the variables used to store important information for the program as well as make it a bit more readable.</p>

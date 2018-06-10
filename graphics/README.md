@@ -12,7 +12,7 @@ Below are the structs that were utilized throughout the program.
 	    vec3 p;
 	    bool onScreen;
     }Platform;
-The `Platform` struct is used to store data necessary for keeping track of and drawing the platforms in the game. `p` stores the left-most point of the platform and `onScreen` stores whether or not the platform would be currently on screen if it were drawn.
+The `Platform` struct is used to store data necessary for keeping track of and drawing the platforms in the game. `p` stores the left-most point of the platform and `onScreen` stores whether or not the `Platform` would be currently on screen if it were drawn.
 
     typedef struct enemy {
 	    vec3 position;
@@ -21,7 +21,7 @@ The `Platform` struct is used to store data necessary for keeping track of and d
 	    int direction;
 	    float speed;
     }Enemy;
-The `Enemy` struct is used to store data necessary for drawing and updating each of the enemies in the game. `position` stores the position of the enemy, `platform` stores which `Platform` the enemy resides on, `alive` stores the value of whether or not the enemy has been killed by the player, `direction` stores which way the enemy is currently facing, and `speed` stores the ground speed of the enemy.
+The `Enemy` struct is used to store data necessary for drawing and updating each of the enemies in the game. `position` stores the position of the `Enemy`, `platform` stores which `Platform` the `Enemy` resides on, `alive` stores the value of whether or not the `Enemy` has been killed by the player, `direction` stores which way the `Enemy` is currently facing, and `speed` stores the ground speed of the `Enemy`.
 
     typedef struct powerup {
 	    vec3 position;
@@ -30,14 +30,14 @@ The `Enemy` struct is used to store data necessary for drawing and updating each
 	    int direction;
 	    float speed;
     }PowerUp;
-The `PowerUp` struct is used to store data necessary for drawing and updating each of the powerups in the game. `position` stores the position of the powerup, `platform` stores which `Platform` the powerup resides on, `used` stores the value of whether or not the powerup has been used by the player, `direction` stores which way the powerup is currently facing, and `speed` stores the ground speed of the powerup.
+The `PowerUp` struct is used to store data necessary for drawing and updating each of the powerups in the game. `position` stores the position of the `PowerUp`, `platform` stores which `Platform` the `PowerUp` resides on, `used` stores the value of whether or not the `PowerUp` has been used by the player, `direction` stores which way the `PowerUp` is currently facing, and `speed` stores the ground speed of the `PowerUp`.
 
     typedef struct coin {
 	    vec3 position;
 	    int platform;
 	    bool grabbed;
     }Coin;
-The `Coin` struct is used to store data necessary for drawing and updating each of the coins in the game. `position` stores the position of each coin, 'platform' stores which `Platform` the coin is on, and `grabbed` stores whether or not the coin has been grabbed by the player.
+The `Coin` struct is used to store data necessary for drawing and updating each of the coins in the game. `position` stores the position of each `Coin`, 'platform' stores which `Platform` the `Coin` is on, and `grabbed` stores whether or not the `Coin` has been grabbed by the player.
 
 ---
 ### Variables

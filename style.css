@@ -230,6 +230,10 @@ h4{
     text-align: left;
     background: repeating-linear-gradient(var(--background), var(--background) 1.2rem, var(--background2) 1.2rem, var(--background2) 2.4rem);
     max-width: 300px;
+    padding: 1.1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--background2);
+    box-shadow: 2px 2px 5px black;
 }
 .readme p{
     text-align: left;
@@ -275,12 +279,14 @@ h4{
     font-size: 1.25rem;
     padding: 0rem 0.25rem;
     margin: auto;
+    box-shadow: 1px 1px 1px black;
 }
 .readme pre code{
     color: initial;
     padding: 0;
     font-size: 1rem;
     background: initial;
+    box-shadow: none;
 }
 .readme hr{
     margin: 1rem 0;

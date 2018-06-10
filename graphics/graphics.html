@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connor French</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:100,200,300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="../script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="header">
+            <a href="index"><img id="logo" src="../pictures/logo.png" /></a>
+            <div class="mobile-menu">
+                <div class="mobile-button" onclick="mobileMenu()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="menu-button">
+                <a href="../about">About</a>
+            </div>
+            <div class="menu-button">
+                <a href="../projects">Projects</a>
+            </div>
+            <div class="menu-button">
+                <a href="../resume">Resume</a>
+            </div>
+            <div class="menu-button">
+                <a href="../contact">Contact</a>
+            </div>
+        </div>
+        <div id="title">
+            <h1>CSC 471</h1>
+        </div>
+        <div class="section even">
+            <h2>Welcome to my final project for CSC 471 Spring 2018.</h2>
+            <p>Here you'll find all information you'll need, including screenshots, the README, and the source code for the project.</p>
+        </div>
+        <div class="section">
+            <h2>Downloadable Files</h2>
+            <div class="project-link">
+                <a href="ConnorFrenchResume.pdf" target="_blank">Source Code</a>
+            </div>
+            <div class="project-link">
+                <a href="ConnorFrenchResume.pdf" target="_blank">README</a>
+            </div>
+        </div>
+        <div class="section even readme">
+            <h2>README</h2>
+            <h4><a id="Connor_French_0"></a>Connor French</h4>
+<h4><a id="CSC_471_1"></a>CSC 471</h4>
+<h4><a id="Spring_2018_2"></a>Spring 2018</h4>
+<br>
+<h2><a id="Final_Project_4"></a>Final Project</h2>
+<p>This is the README for my Final Project in CSC 471 Spring 2018. I chose to create an homage to classic Mario platformers with the knowledge I gained during the class.</p>
+<hr>
+<h3><a id="Structs_7"></a>Structs</h3>
+<p>Below are the structs that were utilized throughout the program.</p>
+<pre><code>typedef struct platform {
+    vec3 p;
+    bool onScreen;
+}Platform;
+</code></pre>
+<p>The <code>Platform</code> struct is used to store data necessary for keeping track of and drawing the platforms in the game. <code>p</code> stores the left-most point of the platform and <code>onScreen</code> stores whether or not the platform would be currently on screen if it were drawn.</p>
+<pre><code>typedef struct enemy {
+    vec3 position;
+    int platform;
+    bool alive;
+    int direction;
+    float speed;
+}Enemy;
+</code></pre>
+<p>The <code>Enemy</code> struct is used to store data necessary for drawing and updating each of the enemies in the game. <code>position</code> stores the position of the enemy, <code>platform</code> stores which <code>Platform</code> the enemy resides on, <code>alive</code> stores the value of whether or not the enemy has been killed by the player, <code>direction</code> stores which way the enemy is currently facing, and <code>speed</code> stores the ground speed of the enemy.</p>
+<pre><code>typedef struct powerup {
+    vec3 position;
+    int platform;
+    bool used;
+    int direction;
+    float speed;
+}PowerUp;
+</code></pre>
+<p>The <code>PowerUp</code> struct is used to store data necessary for drawing and updating each of the powerups in the game. <code>position</code> stores the position of the powerup, <code>platform</code> stores which <code>Platform</code> the powerup resides on, <code>used</code> stores the value of whether or not the powerup has been used by the player, <code>direction</code> stores which way the powerup is currently facing, and <code>speed</code> stores the ground speed of the powerup.</p>
+<pre><code>typedef struct coin {
+    vec3 position;
+    int platform;
+    bool grabbed;
+}Coin;
+</code></pre>
+<p>The <code>Coin</code> struct is used to store data necessary for drawing and updating each of the coins in the game. <code>position</code> stores the position of each coin, ‘platform’ stores which <code>Platform</code> the coin is on, and <code>grabbed</code> stores whether or not the coin has been grabbed by the player.</p>
+<hr>
+<h3><a id="Variables_42"></a>Variables</h3>
+<p>Below are the variables used to store important information for the program as well as make it a bit more readable.</p>
+<h5><a id="Environment_Variables_45"></a>Environment Variables</h5>
+<p><code>WINDOW_HEIGHT</code> : specifies the height of the graphic window<br>
+<code>WINDOW_WIDTH</code> : specifies the width of the graphic window</p>
+<h5><a id="Game_Variables_49"></a>Game Variables</h5>
+<p><code>SCORE</code> : keeps track of the score of the game<br>
+<code>NEW_GAME</code> : if set, begins a new game<br>
+<code>GAME_END</code> : if set, player has finished the game<br>
+<code>PLATFORM_NUM</code> : the number of <code>Platforms</code> in the level<br>
+<code>ENEMY_NUM</code> : the number of <code>Enemies</code> in the level<br>
+<code>POWERUP_NUM</code> : the number of <code>PowerUps</code> in the level<br>
+<code>COIN_NUM</code> : the number of <code>Coins</code> in the level<br>
+<code>COIN_STRING_NUM</code> : the number of <code>Coins</code> to be drawn in a line<br>
+<code>X_OFFSET</code> : the offset from the edge of the starting <code>Platform</code> where the player will be placed initially<br>
+<code>Y_OFFSET</code> : the y-direction offset that will be used to place the camera<br>
+<code>START_POSITION</code> : the starting position of the player<br>
+<code>CAMERA_START_POSITION</code> : the starting position of the camera<br>
+<code>CONTROLS_ENABLED</code> : used to check whether or not the player is currently allowed to move<br>
+<code>DEAD</code> : stores whether or not the player is currently dead<br>
+<code>PAUSE</code> : stores whether or not the pause button is pressed<br>
+<code>INVULNERABLE</code> : stores whether or not the player has just been hit by an <code>Enemy</code><br>
+<code>INVULNERABLE_CLOCK</code>, <code>INVULNERABLE_LIMIT</code>, <code>INVULNERABLE_TICK</code> : used to create the animation that plays after the player gets hit at increased size<br>
+<code>RESIZING</code> : checks whether the player is currently in a state of resizing (either from being hit at large or grabbing a <code>PowerUp</code> at small)<br>
+<code>SKYBOX_TEXTURE</code>, <code>GROUND_TEXTURE</code>, <code>ENEMY_TEXTURE</code>, <code>PLAYER_TEXTURE</code>, <code>COIN_TEXTURE</code> : used for storing the textures for the skybox, the <code>Platforms</code>, the <code>Enemies</code>, the player, and the <code>Coins</code><br>
+<code>START_TIME</code> : used to begin the in-game timer<br>
+<code>END_TIME</code> : used to end the in-game timer<br>
+<code>TIMER</code> : used to store how many seconds have elapsed between <code>START_TIME</code> and <code>END_TIME</code><br>
+<code>LAST_TIMER</code> : stores the elapsed time in the event of the game being paused<br>
+<code>TIME</code> : used to show the time to the player;<br>
+<code>HIGH_SCORE</code> : stores the high score for the currently generated level</p>
+<h5><a id="Position_Variables_76"></a>Position Variables</h5>
+<p><code>PLAYER</code> : stores the position of the player at all times<br>
+<code>CAMERA</code> : stores the position of the camera at all times<br>
+<code>PLAYER_HEIGHT</code> : stores the height of the player for collision purposes<br>
+<code>CAMERA_SPEED</code> : sets the speed of the camera for when it adjusts on each <code>Platform</code><br>
+<code>CAMERA_OFFSET</code> : sets the boundaries for the camera</p>
+<h5><a id="Platform_Variables_83"></a>Platform Variables</h5>
+<p><code>PLATFORMS</code> : stores an array of <code>PLATFORM_NUM</code> <code>Platforms</code><br>
+<code>PLATFORM_GAPS</code> : stores an array of <code>PLATFORM_NUM - 1</code> <code>floats</code> that determine the distance between each platform<br>
+<code>PLATFORM_HEIGHT</code> : sets the height for each <code>Platform</code><br>
+<code>PLATFORM_WIDTH</code> : sets the width for each <code>Platform</code><br>
+<code>PLATFORM_GAP</code> : sets the default width for gaps between <code>Platforms</code><br>
+<code>HEIGHT_VARIATION</code> : stores the maximum height difference between two adjacent <code>Platforms</code><br>
+<code>PREV_PLAT</code> : stores the value of the <code>Platform</code> before the one the player is currently on<br>
+<code>CURRENT_PLAT</code> : stores the value of the <code>Platform</code> the player is currently on<br>
+<code>NEXT_PLAT</code> : stores the value of the <code>Platform</code> the player will be on next</p>
+<h5><a id="Enemy_Variables_94"></a>Enemy Variables</h5>
+<p><code>ENEMIES</code> : stores an array of <code>ENEMY_NUM</code> <code>Enemies</code><br>
+<code>ENEMY_INIT</code> : stores an array of <code>ENEMY_NUM</code> <code>Enemies</code> identical to <code>ENEMIES</code> for reinitialization purposes<br>
+<code>ENEMY_INITIAL_SPEED</code> : stores the initial base speed for <code>Enemies</code><br>
+<code>ENEMY_SPEED</code> : stores the speed for each <code>Enemy</code><br>
+<code>ENEMY_HITBOX_WIDTH</code> : stores the hitbox width for <code>Enemies</code><br>
+<code>ENEMY_HITBOX_HEIGHT</code> : stores the hitbox height for <code>Enemies</code><br>
+<code>ENEMY_HITBOX_X_OFFSET</code> : stores the x-offset for the <code>Enemy</code> hitbox<br>
+<code>ENEMY_HITBOX_Y_OFFSET</code> : stores the y-offset for the <code>Enemy</code> hitbox<br>
+<code>ENEMY_SCALE</code> : stores the scale for each <code>Enemy</code></p>
+<h5><a id="Powerup_Variables_105"></a>Powerup Variables</h5>
+<p><code>POWERUPS</code> : stores an array of <code>POWERUP_NUM</code> <code>PowerUps</code><br>
+<code>POWERUP_INIT</code> : stores an array of <code>POWERUP_NUM</code> <code>PowerUps</code> identical to <code>POWERUPS</code> for initialization purposes<br>
+<code>POWERUP_HITBOX_WIDTH</code> : stores the hitbox width for <code>PowerUps</code><br>
+<code>POWERUP_HITBOX_HEIGHT</code> : stores the hitbox height for <code>PowerUps</code><br>
+<code>POWERUP_HITBOX_X_OFFSET</code> : stores the x-offset for the <code>PowerUp</code> hitbox<br>
+<code>POWERUP_HITBOX_Y_OFFSET</code> : stores the y-offset for the <code>PowerUp</code> hitbox<br>
+<code>POWERUP_SCALE</code> : stores the scale for each <code>PowerUp</code></p>
+<h5><a id="Coin_Variables_114"></a>Coin Variables</h5>
+<p><code>COINS</code> : stores an array of <code>COIN_NUM * COIN_STRING_NUM</code> <code>Coins</code><br>
+<code>COIN_HITBOX_WIDTH</code> : stores the hitbox width for <code>Coins</code><br>
+<code>COIN_HITBOX_HEIGHT</code> : stores the hitbox height for ‘Coins’<br>
+<code>COIN_HITBOX_X_OFFSET</code> : stores the x-offset for the <code>Coin</code> hitbox<br>
+<code>COIN_HITBOX_Y_OFFSET</code> : stores the y-offset for the <code>Coin</code> hitbox</p>
+<h5><a id="Player_Status_Variables_121"></a>Player Status Variables</h5>
+<p><code>WALK_SPEED</code> : stores the value for speed if the player is walking<br>
+<code>RUN_SPEED</code> : stores the value for speed if the player is running<br>
+<code>SPEED</code> : stores the player’s current speed<br>
+<code>DIRECTION</code> : stores which way the player is currently facing<br>
+<code>LEFT</code> : stores whether or not the player is going left<br>
+<code>RIGHT</code> : stores whether or not the player is going right<br>
+<code>JUMP</code> : stores whether or not the player has jumped<br>
+<code>BOUNCE</code> : stores whether or not the player has just jumped off of an <code>Enemy</code><br>
+<code>GROUNDED</code> : stores whether or not the player is currently on the ground<br>
+<code>RUNNING</code> : stores whether or not the player is currently running<br>
+<code>SIZE_SMALL</code> : stores the value for scaling the player when they are not powered-up<br>
+<code>SIZE_LARGE</code> : stores the value for scaling the player when they are powered-up<br>
+<code>PLAYER_SIZE</code> : stores the current value of the player’s size<br>
+<code>SIZE_COEFFICIENT</code> : stores the value for scaling up the player’s hitbox when powered-up<br>
+<code>POWERED</code> : stores whether or not the player has powered-up<br>
+<code>BOUNCING</code> : stores whether or not the player is in the process of jumping off of <code>Enemies</code><br>
+<code>FALLING</code> : stores whether or not the player is in the air without jumping</p>
+<h5><a id="Animation_Variables_140"></a>Animation Variables</h5>
+<p><code>TURN_SPEED</code> : stores the speed that the player turns around<br>
+<code>ARM_SWITCH</code> : stores whether or not the arms and legs of the player have reached their maximum rotations<br>
+<code>ARM_ANGLE</code> : stores the current angle of the player’s right arm<br>
+<code>LEFT_ARM_ANGLE</code> : stores the current angle of the player’s left arm<br>
+<code>LEG_ANGLE</code> : stores the current angle of the player’s legs<br>
+<code>ARM_SPEED</code> : stores the speed that the arms and legs of the player rotate</p>
+<h5><a id="Mathematical_Constants_148"></a>Mathematical Constants</h5>
+<p><code>PI</code> : used in rotation calculations<br>
+<code>GRAVITY</code> : the constant used for gravity calculations<br>
+<code>JUMP_STRENGTH</code> : the constant used for determining how high the player can jump<br>
+<code>ENEMY_KILL_JUMP</code> : the constant used for determining how high the player jumps off of an <code>Enemy</code> without holding a jump button<br>
+<code>ENEMY_BOUNCE</code> : the constant used for determining how high the player jumps off of an <code>Enemy</code> while holding a jump button<br>
+<code>JUMP_SPEED</code> : stores the value for the speed of the player’s jump<br>
+<code>DEATH_OFFSET</code> : stores how far the player can drop below a <code>Platform</code> before it can no longer land on the <code>Platform</code><br>
+<code>SKYBOX_SIZE</code> : sets the size of the skybox for the scene<br>
+<code>HORIZON_ADJUST</code> : sets the increment for adjusting the camera when the player lands on a new <code>Platform</code><br>
+<code>DEATH_Z</code> : sets how far forward the player flies when the player dies<br>
+<code>DEATH_ROTATE</code> : used to rotate the player upon their death in the animation<br>
+<code>DEATH_MARGIN</code> : stores how far the player can fall before the death animation is played<br>
+<code>ENEMY_POINTS</code> : sets the base value of points the player gets if it kills an <code>Enemy</code><br>
+<code>POWERUP_POINTS</code> : sets the value of points the player gets if it contacts a <code>PowerUp</code><br>
+<code>COIN_POINTS</code> : sets the value of points the player gets if it contacts a <code>Coin</code><br>
+<code>MULTIPLIER</code> : stores the multiplier for bouncing off of multiple <code>Enemies</code> in a row<br>
+<code>TIME_BONUS</code> : stores the base value of bonus points the player gets per extra second remaining<br>
+<code>ENEMY_BONUS</code> : sets the value of bonus points the player gets if they complete the level and kill all <code>Enemies</code><br>
+<code>COIN_BONUS</code> : sets the value of bonus points the player gets if they complete the level and grab all <code>Coins</code><br>
+<code>TIME_MAX</code> : sets the maximum time value to be used for bonus time points</p>
+<h5><a id="Gamepad_Variables_170"></a>Gamepad Variables</h5>
+<p><code>GAMEPAD</code> : creates an instance of a <code>Gamepad</code>, a standard class used with XInput controllers<br>
+<code>WAS_CONNECTED</code> : used to store if the <code>Gamepad</code> was connected previously<br>
+<code>JUMP_BUTTON</code> : checks if the jump button on the controller is pressed<br>
+<code>X_DEADZONE</code> : sets the deadzone for the <code>Gamepad's</code> control stick<br>
+<code>PAUSE_BUTTON</code> : checks if the pause button on the controller is pressed</p>
+<hr>
+<h3><a id="Functions_178"></a>Functions</h3>
+<p>Below is a complete list of the functions in this program, barring the standard ones that came with the <code>Gamepad</code> class from XInput.</p>
+<h5><a id="getArmAngle_181"></a><code>getArmAngle()</code></h5>
+<p>This function uses <code>ARM_ANGLE</code>, <code>LEFT_ARM_ANGLE</code>, and <code>LEG_ANGLE</code> to animate the arms and legs of the player while running. The arms and legs also pose if the player is currently jumping.</p>
+<h5><a id="checkJump_184"></a><code>checkJump()</code></h5>
+<p>This function uses ‘JUMP’ to check whether or not the player has jumped, and also sets <code>GROUNDED</code>, <code>JUMP_SPEED</code>, and other variables to run most of the functionality involving <code>GRAVITY</code> calculations and vertical positioning.</p>
+<h5><a id="checkMoving_187"></a><code>checkMoving()</code></h5>
+<p>This function uses <code>SPEED</code>, <code>RUN_SPEED</code>, <code>WALK_SPEED</code>, <code>LEFT</code>, and <code>RIGHT</code> to move the player horizontally and set the variables responsible for movement.</p>
+<h5><a id="checkTurn_190"></a><code>checkTurn()</code></h5>
+<p>This function uses <code>LEFT</code>, <code>RIGHT</code>, <code>DIRECTION</code>, and <code>TURN_SPEED</code> to determine how the player should be rotated and which direction it is facing and whether or not the player’s turning animation needs to be played.</p>
+<h5><a id="generatePlatforms_193"></a><code>generatePlatforms()</code></h5>
+<p>This function uses <code>PLATFORMS</code>, <code>PLATFORM_NUM</code>, and <code>PLATFORM_GAPS</code> to instantiate the <code>Platforms</code> into the <code>PLATFORMS</code> array with a gap of <code>PLATFORM_GAP</code> between them and a random difference in height between <code>0</code> and <code>HEIGHT_VARIATION</code>.</p>
+<h5><a id="getCurrentPlat_196"></a><code>getCurrentPlat()</code></h5>
+<p>This function gets the current platform that the player is on and stores it into <code>CURRENT_PLAT</code>. If the previous and next platforms exist, they are stored into <code>PREV_PLAT</code> and <code>NEXT_PLAT</code>, respectively. If the player is above a gap, then <code>CURRENT_PLAT</code> is set to <code>-1</code>.</p>
+<h5><a id="checkPlatOnScreen_199"></a><code>checkPlatOnScreen()</code></h5>
+<p>This function is utilized to help optimize the program and prevent slowdowns from attempting to draw too many things at once. It takes advantage of the <code>onScreen</code> attribute of the <code>Platforms</code> to determine which <code>Platforms</code> should actually be visible on the screen.</p>
+<h5><a id="adjustCamera_202"></a><code>adjustCamera()</code></h5>
+<p>This function takes advantage of the <code>CAMERA_OFFSET</code> and the <code>CAMERA_SPEED</code> to determine how the camera should adjust vertically to match the player’s position and ensure that the level is properly displayed on screen.</p>
+<h5><a id="checkReset_205"></a><code>checkReset()</code></h5>
+<p>This function checks to see whether or not a <code>NEW_GAME</code> has been initiated and, if it has, resets all necessary variables to their initial values.</p>
+<h5><a id="checkFall_208"></a><code>checkFall()</code></h5>
+<p>This function checks if the player is currently <code>FALLING</code> and ensures that it does not hang in the air for any reason by double-checking that the <code>GRAVITY</code> is still taking effect on the player.</p>
+<h5><a id="generateEnemies_211"></a><code>generateEnemies()</code></h5>
+<p>This function generates the <code>Enemies</code> at the beginning of the game and gives each of them a random <code>position</code> on a random <code>platform</code> with a random <code>speed</code> based off of <code>ENEMY_SPEED</code> and a random <code>direction</code> and sets all of their <code>alive</code> attributes to <code>true</code>.</p>
+<h5><a id="reloadEnemies_214"></a><code>reloadEnemies()</code></h5>
+<p>This function reloads all of the <code>Enemies</code> in <code>ENEMIES</code> by copying them over from the <code>ENEMY_INIT</code> array that was created at the beginning of the game.</p>
+<h5><a id="generatePowerUps_217"></a><code>generatePowerUps()</code></h5>
+<p>This function generates the <code>PowerUps</code> at the beginning of the game and gives each of them a random <code>position</code> on a random <code>platform</code> with a <code>speed</code> of <code>0</code> and a random <code>direction</code> and sets all of their <code>used</code> attributes to <code>false</code>.</p>
+<h5><a id="reloadPowerUps_220"></a><code>reloadPowerUps()</code></h5>
+<p>This function reloads all of the <code>PowerUps</code> in <code>POWERUPS</code> by copying them over from the <code>POWERUP_INIT</code> array that was created at the beginning of the game.</p>
+<h5><a id="generateCoins_223"></a><code>generateCoins()</code></h5>
+<p>This function generates the <code>Coins</code> at the beginning of the game and gives each of them a random <code>position</code> above a random <code>platform</code> and sets all of their <code>grabbed</code> attributes to <code>false</code>.</p>
+<h5><a id="reloadCoins_226"></a><code>reloadCoins()</code></h5>
+<p>this function reloads all of the <code>Coins</code> in <code>COINS</code> by resetting all of their <code>grabbed</code> attributes to <code>false</code>.</p>
+<h5><a id="enemyMove_229"></a><code>enemyMove()</code></h5>
+<p>This function checks the <code>direction</code> of each <code>Enemy</code> in <code>ENEMIES</code> and updates their <code>position</code> by adding the prooduct of their <code>direction</code> and their <code>speed</code>.</p>
+<h5><a id="checkHit_232"></a><code>checkHit()</code></h5>
+<p>This function runs through each <code>Enemy</code> in <code>ENEMIES</code> and checks if the player occupies the same x-position as an <code>Enemy</code>. If it does, then it checks if the player’s y-position is sufficiently above the <code>Enemy's</code> y-position. If it is, then the player is credited as jumping on the <code>Enemy</code> and it checks if the player has bounced off another <code>Enemy</code> and adds to the <code>SCORE</code> accordingly and <code>alive</code> is set to <code>false</code>. If it is not above the <code>Enemy</code>, then it checks if the player is powered-up. If it is, then the resizing animation is played and the player gets smaller. If not, then <code>DEAD</code> is set to true and the death animation is played.</p>
+<h5><a id="checkPowerUpHit_235"></a><code>checkPowerUpHit()</code></h5>
+<p>This function checks if the player occupies the same x-position as any <code>PowerUp</code> in <code>POWERUPS</code>. If it does, then it checks <code>PLAYER_SIZE</code> to see if the player needs to be resized and adds <code>POWERUP_POINTS</code> to the <code>SCORE</code> and sets <code>used</code> to <code>true</code>.</p>
+<h5><a id="checkCoinHit_238"></a><code>checkCoinHit()</code></h5>
+<p>This function checks if the player occupies the same general x and y-positions as any ‘Coin’ in ‘COINS’. If it does, then <code>COIN_POINTS</code> is added to <code>SCORE</code> and <code>grabbed</code> is set to <code>true</code> for the <code>Coin</code>.</p>
+<h5><a id="continueFalling_241"></a><code>continueFalling()</code></h5>
+<p>This function checks if the player has stalled in the air for any reason. This was an infrequent problem with one other function, but it is simply solved by decreasing the player’s y-position by <code>JUMP_SPEED</code> and decreasing <code>JUMP_SPEED</code> by <code>GRAVITY</code>.</p>
+<h5><a id="checkResize_244"></a><code>checkResize()</code></h5>
+<p>This function runs the routine that resizes the player in the event of grabbing a <code>PowerUp</code> or getting hit by an <code>Enemy</code>.</p>
+<h5><a id="checkDead_247"></a><code>checkDead()</code></h5>
+<p>This function runs the death animation of the player if <code>DEAD</code> is set to <code>true</code>.</p>
+<h5><a id="getCurrentInformation_250"></a><code>getCurrentInformation()</code></h5>
+<p>This function currently displays the current relevant game information to the console window, including the number of <code>Platforms</code> remaining, the current <code>SCORE</code>, and the <code>TIME</code>.</p>
+<h5><a id="checkHighScore_253"></a><code>checkHighScore()</code></h5>
+<p>This function runs on completion of the game and checks to see if the player has achieved a high score, which would then be stored in <code>HIGH_SCORE</code>.</p>
+<h5><a id="checkEndGame_256"></a><code>checkEndGame()</code></h5>
+<p>This function checks if the game has finished and then displays the <code>SCORE</code> and all of the bonuses earned, as well as a breakdown of all of the points earned in the game.</p>
+<h5><a id="keyCallbackGLFWwindow_window_int_key_int_scancode_int_action_int_mods_259"></a><code>keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)</code></h5>
+<p>This function is used to take keyboard input from the user. If any of the directional buttons or their letter equivalents are pressed, then the corresponding variable is set (<code>LEFT</code>, <code>RIGHT</code>, <code>JUMP</code>). If the <code>SPACE</code> key is hit as well, <code>JUMP</code> is set, and <code>RUNNING</code> is set by holding either of the <code>SHIFT</code> keys. <code>PAUSE</code> is set if the <code>P</code> key is hit, and a <code>NEW_GAME</code> is initiated if the <code>N</code> key is hit.</p>
+<h5><a id="mouseCallbackGLFWwindow_window_int_button_int_action_int_mods_262"></a><code>mouseCallback(GLFWwindow *window, int button, int action, int mods)</code></h5>
+<p>This function is largely unused in this program. It is a holdover from the Lab 6 code provided by Professor Eckhardt that this project was originally based on.</p>
+<h5><a id="resizeCallbackGLFWwindow_window_int_width_int_height_265"></a><code>resizeCallback(GLFWwindow *window, int width, int height)</code></h5>
+<p>This function resizes the window to the appropriate size.</p>
+<h5><a id="initconst_stdstring_resourceDirectory_268"></a><code>init(const std::string&amp; resourceDirectory)</code></h5>
+<p>This function initializes the programs used to draw each of the elements of the program. It creates the programs <code>player</code>, <code>enemy</code>, <code>powerup</code>, <code>coin</code>, <code>ground</code>, and <code>skybox</code>.</p>
+<h5><a id="initGeomconst_stdstring_resourceDirectory_271"></a><code>initGeom(const std::string&amp; resourceDirectory)</code></h5>
+<p>This function initializes each of the geometric shapes used in the program - the <code>cube</code>, <code>sphere</code>, and <code>cylinder</code>. It also loads the textures for each of the programs and runs <code>generatePlatforms()</code>, <code>generateEnemies()</code>, <code>generatePowerUps()</code>, and <code>generateCoins()</code> to generate all of the objects in the scene.</p>
+<h5><a id="render_274"></a><code>render()</code></h5>
+<p>This function does the majority of the work in the program. It runs <code>checkDead()</code>, then draws the skybox, the ground <code>Platforms</code>, the <code>Enemies</code>, the <code>PowerUps</code>, the <code>Coins</code>, and the player using various hierarchical modeling techniques. Then, it runs <code>checkReset()</code>, <code>getCurrentPlat()</code>, <code>checkPlatOnScreen()</code>, <code>checkTurn()</code>, <code>checkMoving()</code>, <code>checkJump()</code>, <code>getArmAngle()</code>, <code>adjustCamera()</code>, <code>checkFall()</code>, <code>checkPowerUpHit()</code>, <code>checkCoinHit()</code>, <code>checkResize()</code>, <code>enemyMove()</code>, <code>checkHit()</code>, <code>continueFalling()</code>, <code>getCurrentInformation()</code>, and <code>checkEndGame()</code>.</p>
+<h5><a id="controllerEventsWindowManager_windowManager_277"></a><code>controllerEvents(WindowManager *windowManager)</code></h5>
+<p>This function behaves similarly to the <code>keyCallback</code> function except that it takes in all of its input from the XInput controller that has been connected.</p>
+<h5><a id="mainint_argc_char_argv_280"></a><code>main(int argc, char *argv[])</code></h5>
+<p>This function runs the main brunt of the program, running the <code>render</code> function and all of the input functions as well.</p>      
+        </div>
+        <div class="section video">
+            <h2>Milestones</h2>
+            <h4>Milestone 1</h4>
+            <p>Create main character and platforms; create collision detection for traversal on platforms</p>
+            </p>
+            <video autoplay loop muted>
+                <source src="milestone1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>Milestone 2</h4>
+            <p>Create basic enemies</p>
+            <video autoplay loop muted>
+                <source src="milestone2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h4>End Goal</h4>
+            <p>End goal: A single level (possibly generated without an end) that contains numerous obstacles and enemies for the character to deal with</p>
+            <video autoplay loop muted>
+                <source src="end_goal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="footer">
+            <div class="empty" style="float: left;"></div>
+            <div id="left-footer">
+                <img src="../pictures/connor-about.jpg" />
+            </div>
+            <div class="empty" style="float: right;"></div>
+            <div id="right-footer">
+                <p>Connor French</p>
+                <a href="mailto:cbfrench@calpoly.edu">cbfrench@calpoly.edu</a>
+                <br>
+                <a href="tel:9254825219">(925) 482-5219</a>
+            </div>
+        </div>
+        <div id="small-footer">&copy;2018 Connor French. All Rights Reserved.</div>  
+        </div>
+    </body>
+</html>

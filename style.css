@@ -221,6 +221,91 @@ h4{
     background-color: var(--footer-color);
 }
 
+.readme{
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.readme pre{
+    margin: 2rem;
+    text-align: left;
+    background: repeating-linear-gradient(var(--background), var(--background) 1.2rem, var(--background2) 1.2rem, var(--background2) 2.4rem);
+    max-width: 300px;
+}
+.readme p{
+    text-align: left;
+    margin: initial;
+    font-size: 1rem;
+}
+.readme h5{
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.readme h4{
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.readme h3{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: initial;
+    text-transform: initial;
+    letter-spacing: initial;
+    background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
+    color: var(--menu-text);
+}
+.readme h2{
+    text-align: center;
+    background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
+    color: var(--menu-text);
+}
+.readme h2:nth-child(1){
+    background: transparent;
+    color: initial;
+}
+.readme code{
+    color: var(--link-hover);
+    background: var(--background2);
+    font-size: 1.25rem;
+    padding: 0rem 0.25rem;
+    margin: auto;
+}
+.readme pre code{
+    color: initial;
+    padding: 0;
+    font-size: 1rem;
+    background: initial;
+}
+.readme hr{
+    margin: 1rem 0;
+    border: 1px solid transparent;
+}
+.video h4{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
+    background-attachment: fixed;
+    color: var(--menu-text);
+    max-width: 10rem;
+}
+.video p{
+    margin-bottom: 1rem;
+}
+.video video{
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+}
+
 #footer{
     height: 20rem;
     background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
@@ -309,6 +394,13 @@ h4{
     margin-top: 0.35rem;
 }
 
+@media only screen and (max-width: 1200px){
+    .readme{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
 @media only screen and (max-width: 800px){
     .empty{
         width: 10%;
@@ -335,6 +427,10 @@ h4{
     }
     .menu-button{
         display: none;
+    }
+    .readme{
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }   
 
@@ -372,6 +468,10 @@ h4{
     }
     #right-footer p{
         font-size: 1rem;
+    }
+    .readme{
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }   
 

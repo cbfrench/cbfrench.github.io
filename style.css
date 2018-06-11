@@ -358,7 +358,7 @@ h4{
     display: inline-block;
     width: 49%;
     height: 3.4rem;
-    text-align: right;
+    text-align: center;
 }
 .row{
     padding: 1rem 0;
@@ -368,8 +368,8 @@ h4{
     margin-bottom: 1rem;
 }
 
-.row .i-contain.r{
-    text-align: left;
+.row .i-contain.r p{
+    text-align: right;
 }
 
 #footer{
@@ -470,7 +470,7 @@ h4{
     }
     .row .i-contain.r{
         float: right;
-        text-align: center;
+        text-align: right;
     }
 }
 

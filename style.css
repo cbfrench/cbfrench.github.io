@@ -324,13 +324,13 @@ h4{
     display: inline-block;
     font-size: 1.5rem;
     box-shadow: 3px 2px var(--background3);
-    float: right;
     margin-right: 1rem;
 }
 .control-stick{
     background: radial-gradient(var(--background2) 1.15rem, var(--background3) 1.3rem, var(--background2) 1.45rem);
     height: 1rem;
     padding: 1.1rem;
+    margin-bottom: -0.9rem;
 }
 .instruction-key{
     color: black;
@@ -342,7 +342,6 @@ h4{
     border-radius: 0.5rem;
     min-width: 1.5rem;
     box-shadow: 3px 2px var(--background3);
-    float: right;
     margin-right: 1rem;
 }
 .row p{
@@ -351,13 +350,13 @@ h4{
     margin-right: 1rem;
 }
 .row .i-contain p{
-    float: left;
     line-height: 3.4rem;
 }
 .row .i-contain{
     display: inline-block;
     width: 49%;
     height: 3.4rem;
+    text-align: right;
 }
 .row{
     padding: 1rem 0;
@@ -366,8 +365,9 @@ h4{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.row .i-contain.f p{
-    float: right;
+
+.row .i-contain.r{
+    text-align: left;
 }
 
 #footer{
@@ -463,6 +463,13 @@ h4{
         padding-left: 10rem;
         padding-right: 10rem;
     }
+    .row .i-contain{
+        text-align: justify;
+    }
+    .row .i-contain.r{
+        float: right;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -496,6 +503,8 @@ h4{
         padding-left: 5rem;
         padding-right: 5rem;
     }
+    .row .i-contain{
+        height: 11rem;
 }   
 
 @media only screen and (max-width: 415px){   
@@ -540,29 +549,7 @@ h4{
     .readme pre{
         background: repeating-linear-gradient(var(--background), var(--background) 1.15rem, var(--background2) 1.15rem, var(--background2) 2.35rem);
     }
-    .row{
-        max-width: 100%;
-    }
-    .row .i-contain{
-        width: 82.5%;
-    }
-    .row .i-contain .instruction-button, .row .i-contain .instruction-key{
-        float: initial;
-        margin: 0;
-    }
-    .row .i-contain.f .instruction-button, .row .i-contain.f .instruction-key{
-        float: right;
-    }
-    .row .i-contain.f{
-        margin-left: -0rem;
-    }
-    .row .i-contain p{
-        float: initial;
-        text-align: center;
-    }
-    .row .i-contain:nth-last-child(1){
-        margin-left: 0;
-    }
+    
 }   
 
 

@@ -1,50 +1,207 @@
 :root{
     --logo-width: 50%;
     --main-color: #22aaff;
+    --darker-main: #0088dd;
+    --accent-color: #ffaa22;
+    --gray: #eeeeee;
+    --text-shadow-color: rgba(0, 0, 0, 0.25);
+    --box-shadow-color: rgba(34, 170, 255, 0.1);
+    --speed: 0.2s;
 }
 body{
-    margin: 0;
-    font-family: Oswald, Arial, sans-serif;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 300;
 }
-p{
+p, h1, h2, h3, h4, h5, h6, ul{
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
+.row.centered{
+    text-align: center;
+}
 .menu{
     text-align: center;
-    background: var(--main-color);
+    background: var(--accent-color);
     margin-top: 0;
     line-height: 2rem;
     font-size: 2rem;
-    padding: 1rem;
+    font-weight: 300;
     text-transform: uppercase;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu-button{
+    display: inline-block;
+    margin: 0 0.75rem;
+}
+.menu-button a{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    line-height: 4rem;
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+    transition: all var(--speed);
+    text-shadow: 2px 2px 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color);
+}
+.menu-button a:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+#header{
+    margin: 5rem 0;
+    background: var(--main-color);
+    text-align: center;
     color: white;
 }
 .logo{
     text-align: center;
     padding: 2rem 0;
+    background: radial-gradient(var(--main-color) 0%, white 80%);
+    margin: auto;
 }
 .logo img{
-    width: var(--logo-width);
+    max-width: var(--logo-width);
+    max-height: 15rem;
 }
 
 .content{
-    margin: 0 5rem;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+.review-link{
+    height: 5rem;
+    border: 2px solid var(--main-color);
+    box-shadow: 2px 2px 2px var(--box-shadow-color), 2px -2px 2px var(--box-shadow-color), -2px 2px 2px var(--box-shadow-color), -2px -2px 2px var(--box-shadow-color);
+    margin-bottom: 1rem;
+    transition: all var(--speed);
+    cursor: pointer;
+}
+.review-link:hover{
+    margin-left: -1rem;
+    margin-right: -1rem;
+    background: var(--main-color);
+}
+.left-review-link, .right-review-link{
+    display: inline-block;
+    height: 100%;
+}
+.left-review-link{
+    width: 40%;
+    background: radial-gradient(var(--main-color) 0%, transparent 70%);
+    float: left;
+    text-align: center;
+}
+.right-review-link{
+    width: 60%;
+    background: var(--main-color);
+    -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    line-height: 5rem;
+    color: white;
+    transition: all var(--speed);
+}
+.review-link img{
+    max-width: 10rem;
+    max-height: 100%;
+    margin: auto;
+}
+game{
+    font-style: italic;
+    color: var(--accent-color);
 }
 .row{
-    text-align: center;
+    text-align: justify;
+}
+.row p{
+    margin-bottom: 1.5rem;
+    display: inline-block;
 }
 .row.heading{
     background: var(--main-color);
     color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+.row.score.heading{
+    text-align: center;
+    margin-bottom: 0;
+    background: var(--main-color);
+}
+.row.score{
+    background: var(--darker-main);
+    color: white;
+    margin: auto;
+}
+ul{
+    margin-bottom: 1rem;
+    list-style: none;
+}
+li{
+    padding-left: 1rem;
+    text-indent: -1rem;
+}
+#pros li:before{
+    content: "+";
+    padding-right: 5px;
+}
+#cons li:before{
+    content: "-";
+    padding-right: 5px;
+}
+#left-score, #right-score{
+    display: inline-block;
+    height: 100%;
+}
+#left-score{
+    float: left;
+    width: 45%;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+#right-score{
+    background: var(--accent-color);
+    -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    min-height: 15rem;
+    line-height: 5rem;
+    width: 55%;
+    padding-top: 5rem;
+}
+#left-score h4, #right-score{
+    text-align: center;
+}
+h1, h2, h3, h4, h5{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color);
+}
+h1{
+    font-size: 5rem;
 }
 h2{
-    text-transform: uppercase;
     font-size: 2rem;
-    font-weight: 300;
+}
+h3{
+    font-size: 5rem;
+}
+h4{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+h5{
+    font-size: 1.15rem;
+    text-align: center;
+}
+#right-score h3, #right-score h4{
+    margin-left: 2rem;
 }
 .footer{
     width: 100%;
@@ -52,5 +209,6 @@ h2{
     color: white;
     position: absolute;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 5rem;
+    padding: 1rem 0;
 }

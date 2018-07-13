@@ -36,15 +36,38 @@ p, h1, h2, h3, h4, h5, h6, ul{
 .menu-button{
     display: inline-block;
     margin: 0 0.75rem;
+    padding: 0 1rem;
+}
+.menu-logo{
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 -1.5rem;
+    cursor: pointer;
+    transition: all var(--speed);
+}
+.menu-logo:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.menu-logo img{
+    max-width: 5rem;
+    margin-bottom: -3.5rem;
+    transition: all var(--speed);
+}
+.menu-logo img:hover, .menu-logo:hover img:not(:hover){
+    max-width: 5.5rem;
+    margin-top: -0.5rem;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
 }
 .menu-button a{
     height: 100%;
     width: 100%;
     display: inline-block;
     line-height: 4rem;
+    padding: 0 1rem;
+    margin-left: -1rem;
     color: white;
     text-decoration: none;
-    padding: 0 1rem;
     transition: all var(--speed);
     text-shadow: 2px 2px 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color);
 }
@@ -126,7 +149,7 @@ game{
     color: white;
     text-align: center;
     margin-bottom: 1rem;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 }
 .row.score.heading{
     text-align: center;
@@ -139,12 +162,13 @@ game{
     margin: auto;
 }
 ul{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     list-style: none;
 }
 li{
     padding-left: 1rem;
     text-indent: -1rem;
+    margin-bottom: 0.25rem;
 }
 #pros li:before{
     content: "+";
@@ -211,4 +235,28 @@ h5{
     text-align: center;
     margin-top: 5rem;
     padding: 1rem 0;
+}
+
+@media only screen and (max-width: 500px){
+    .menu{
+        display: table;
+        width: 100%;
+    }
+    .menu-logo{
+        display: table-header-group;
+    }
+    .menu-logo img{
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+    .menu-logo img:hover, .menu-logo:hover img:not(:hover){
+        max-width: 5.5rem;
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+    .menu-button{
+        width: 100%;
+        margin: 0;
+        margin-left: -1rem;
+    }
 }

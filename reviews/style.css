@@ -285,6 +285,7 @@ h5{
         margin-left: 0;
     }
     li{
-        padding-left: 0;
+        padding: 0 1rem;
+        text-indent: -2rem;
     }
 }

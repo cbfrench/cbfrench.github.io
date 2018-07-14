@@ -281,6 +281,9 @@ h5{
         -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
     }
+    #right-score h3{
+        margin-left: 0;
+    }
     li{
         padding-left: 0;
     }

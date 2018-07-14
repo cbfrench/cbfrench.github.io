@@ -273,4 +273,12 @@ h5{
         -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
     }
+    #left-score, #right-score{
+        height: 50%;
+        width: 100%;
+    }
+    #right-score{
+        -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+    }
 }

@@ -259,4 +259,18 @@ h5{
         margin: 0;
         margin-left: -1rem;
     }
+    h1{
+        font-size: 4rem;
+    }
+    .review-link{
+        height: 10rem;
+    }
+    .left-review-link, .right-review-link{
+        height: 50%;
+        width: 100%;
+    }
+    .right-review-link{
+        -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+    }
 }

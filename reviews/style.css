@@ -89,6 +89,7 @@ p, h1, h2, h3, h4, h5, h6, ul{
 .logo img{
     max-width: var(--logo-width);
     max-height: 15rem;
+    padding-top: 1rem;
 }
 
 .content{
@@ -226,6 +227,7 @@ h5{
 }
 #right-score h3, #right-score h4{
     margin-left: 2rem;
+    text-shadow: 5px 5px 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color), 2px 2px var(--text-shadow-color), 3px 3px var(--text-shadow-color), 4px 4px var(--text-shadow-color);
 }
 .footer{
     width: 100%;

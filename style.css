@@ -136,6 +136,9 @@ h4{
     margin: auto;
     text-align: center;
 }
+.section.readme p{
+    max-width: 100%;
+}
 .text-box{
     background: repeating-linear-gradient(var(--angle), var(--menu-color),    var(--menu-color) var(--bar-width), var(--menu-hover) var(--bar-width), var(--menu-hover) calc(var(--bar-width)*2));
     background-attachment: fixed;

@@ -61,9 +61,9 @@ a{
     background-color: var(--menu-hover);
 }
 #logo{
-    width: 8rem;
+    width: 7rem;
     position: relative;
-    top: 3.25rem;
+    top: 2.75rem;
     margin-top: -3.5rem;
     cursor: pointer;
     padding: 0 3rem;

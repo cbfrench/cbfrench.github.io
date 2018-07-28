@@ -39,6 +39,9 @@ a{
     background-color: white;
     text-align: center;
 }
+div:nth-child(3).menu-button{
+    display: none;
+}
 .menu-button{
     display: inline-block;
     height: 8rem;
@@ -500,6 +503,9 @@ h4{
     }
     .menu-button{
         display: none;
+    }
+    div:nth-child(3).menu-button{
+        display: none !important;
     }
     .readme{
         padding-left: 5rem;

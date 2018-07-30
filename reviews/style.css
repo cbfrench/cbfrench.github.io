@@ -97,6 +97,35 @@ p, h1, h2, h3, h4, h5, h6, ul{
     width: 80%;
     max-width: 800px;
 }
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+.sorting.row{
+    text-align: center;
+}
+.sorting.row p{
+    margin: 0;
+    margin-top: 1rem;
+}
+#review-sort{
+    border: 0;
+    width: 100%;
+    margin: 1rem 0;
+    background: var(--accent-color);
+    font: 400 1rem "Gill Sans";
+    outline: none;
+    height: 2.5rem;
+    text-align-last: center;
+    color: white;
+    cursor: pointer;
+    outline: 2px solid var(--accent-color); 
+    outline-offset:-2px;
+    transition: all var(--speed);
+}
+#review-sort:hover{
+    background: rgba(232, 155, 31, 1);
+}
 .review-link{
     height: 5rem;
     border: 2px solid var(--main-color);

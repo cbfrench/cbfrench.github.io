@@ -13,7 +13,7 @@ function sortReviews(){
     var s = document.getElementById("review-sort");
     var v = s.options[s.selectedIndex].text;
     v = v.toLowerCase();
-    if(v == "date"){
+    if(v == "date added"){
         for(var i = 0; i < reviews.length; i++){
             reviews[i].style.order = reviews[i].children[0].getAttribute("date") * -1;
         }
@@ -31,9 +31,14 @@ function sortReviews(){
             }
         }
     }
-    if(v == "score"){
+    if(v == "highest score"){
         for(var i = 0; i < reviews.length; i++){
             reviews[i].style.order = reviews[i].children[0].getAttribute("score") * -1;
+        }
+    }
+    if(v == "lowest score"){
+        for(var i = 0; i < reviews.length; i++){
+            reviews[i].style.order = reviews[i].children[0].getAttribute("score");
         }
     }
 }

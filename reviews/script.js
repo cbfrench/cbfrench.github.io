@@ -108,7 +108,7 @@ function newReviews(){
         var year = r - month - day;
         month /= 100;
         year /= 10000;
-        if(day == d.getDate() && month == (d.getMonth() + 1) && year == d.getFullYear()){
+        if((day == d.getDate() || day == d.getDate() - 1) && month == (d.getMonth() + 1) && year == d.getFullYear()){
             reviews[i].children[0].children[0].innerHTML = "<div class='new-review'>NEW</div>" + reviews[i].children[0].children[0].innerHTML;
         }
     }

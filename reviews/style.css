@@ -100,17 +100,25 @@ p, h1, h2, h3, h4, h5, h6, ul{
 .reviews{
     display: flex;
     flex-direction: column;
+    min-height: 30rem;
+}
+.review-buttons{
+    white-space: nowrap;
 }
 .sorting.row{
     text-align: center;
+    width: 50%;
+    display: inline-block;
+    margin: auto;
 }
 .sorting.row p{
     margin: 0;
     margin-top: 1rem;
 }
-#review-sort{
+#review-sort, #review-system{
     border: 0;
-    width: 100%;
+    display: inline-block;
+    width: 90%;
     margin: 1rem 0;
     background: var(--accent-color);
     font: 400 1rem "Gill Sans";
@@ -123,7 +131,7 @@ p, h1, h2, h3, h4, h5, h6, ul{
     outline-offset:-2px;
     transition: all var(--speed);
 }
-#review-sort:hover{
+#review-sort:hover, #review-system:hover{
     background: rgba(232, 155, 31, 1);
 }
 .review-link{
@@ -258,6 +266,15 @@ h5{
 #right-score h3, #right-score h4{
     margin-left: 2rem;
     text-shadow: 5px 5px 2px var(--text-shadow-color), 1px 1px var(--text-shadow-color), 2px 2px var(--text-shadow-color), 3px 3px var(--text-shadow-color), 4px 4px var(--text-shadow-color);
+}
+.played-on{
+    text-align: center;
+    margin: auto;
+}
+.played-on img{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    max-width: 20rem;
 }
 .footer{
     width: 100%;

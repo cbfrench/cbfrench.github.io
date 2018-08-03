@@ -102,6 +102,16 @@ p, h1, h2, h3, h4, h5, h6, ul{
     flex-direction: column;
     min-height: 30rem;
 }
+.new-review{
+    position: absolute;
+    background: var(--accent-color);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
+    padding: 0 3rem 0 1rem;
+}
 .review-buttons{
     white-space: nowrap;
 }
@@ -122,17 +132,17 @@ p, h1, h2, h3, h4, h5, h6, ul{
     margin: 1rem 0;
     background: var(--accent-color);
     font: 400 1rem "Gill Sans";
-    outline: none;
     height: 2.5rem;
     text-align-last: center;
     color: white;
     cursor: pointer;
-    outline: 2px solid var(--accent-color); 
+    outline: 2px solid white; 
     outline-offset:-2px;
     transition: all var(--speed);
 }
 #review-sort:hover, #review-system:hover{
     background: rgba(232, 155, 31, 1);
+    width: 100%;
 }
 .review-link{
     height: 5rem;

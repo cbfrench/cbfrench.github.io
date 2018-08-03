@@ -4,6 +4,7 @@ $(document).ready(function(){
     getFooterDate();
     if ($('.reviews').length > 0)
     {
+        newReviews();
         sortReviews();
         sortSystem();
         $("#review-sort").change(function(){
@@ -95,5 +96,21 @@ function getFooterDate(){
     var f = document.getElementsByClassName("footer")[0].children[0];
     var s = "&copy;" + d.getFullYear() + " Connor French. All Rights Reserved.";
     f.innerHTML = s;
+}
+
+function newReviews(){
+    var reviews = document.getElementsByClassName("review-link");
+    var d = new Date();
+    for(var i = 0; i < reviews.length; i++){
+        var r = reviews[i].children[0].getAttribute("date");
+        var day = r % 100;
+        var month = r % 10000 - day;
+        var year = r - month - day;
+        month /= 100;
+        year /= 10000;
+        if(day == d.getDate() && month == (d.getMonth() + 1) && year == d.getFullYear()){
+            reviews[i].children[0].children[0].innerHTML = "<div class='new-review'>NEW</div>" + reviews[i].children[0].children[0].innerHTML;
+        }
+    }
 }
 });

@@ -1,18 +1,22 @@
 var term = "all systems";
 
 $(document).ready(function(){
-    sortReviews();
-    sortSystem();
-    $("#review-sort").change(function(){
-        $(".review-link").fadeTo(200, 0).delay(200);
-        setTimeout(sortReviews, 300);
-        $(".review-link").fadeTo(200, 1);
-    });
-    $("#review-system").change(function(){
-        $(".review-link").fadeTo(200, 0).delay(200);
-        setTimeout(sortSystem, 300);
-        $(".review-link").fadeTo(200, 1);
-    });
+    getFooterDate();
+    if ($('.reviews').length > 0)
+    {
+        sortReviews();
+        sortSystem();
+        $("#review-sort").change(function(){
+            $(".review-link").fadeTo(200, 0).delay(200);
+            setTimeout(sortReviews, 300);
+            $(".review-link").fadeTo(200, 1);
+        });
+        $("#review-system").change(function(){
+            $(".review-link").fadeTo(200, 0).delay(200);
+            setTimeout(sortSystem, 300);
+            $(".review-link").fadeTo(200, 1);
+        });
+    }
 
 function sortReviews(){
     var reviews = document.getElementsByClassName("review-link");
@@ -84,5 +88,12 @@ function sortSystem(){
             reviews[i].style.display = "none";
         }
     }
+}
+
+function getFooterDate(){
+    var d = new Date();
+    var f = document.getElementsByClassName("footer")[0].children[0];
+    var s = "&copy;" + d.getFullYear() + " Connor French. All Rights Reserved.";
+    f.innerHTML = s;
 }
 });

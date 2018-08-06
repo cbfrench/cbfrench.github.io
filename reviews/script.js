@@ -98,9 +98,42 @@ function getFooterDate(){
     f.innerHTML = s;
 }
 
+function checkNew(day, month, year){
+    var d = new Date();
+    var g = new Date(year, month, 0).getDate();
+    var cday = d.getDate();
+    var cmonth = d.getMonth() + 1;
+    var cyear = d.getFullYear();
+    var deq = day == cday;
+    var meq = month == cmonth;
+    var yeq = year == cyear;
+    if(yeq){
+        if(meq){
+            if(deq){
+                return true;
+            }
+            else{
+                if(day == cday - 1){
+                    return true;
+                }
+            }
+        }
+        else{
+            if((month == cmonth - 1) && (day == g) && (cday == 1)){
+                return true;
+            }
+        }
+    }
+    else{
+        if((year == cyear - 1) && (month == 12) && (day == 31) && (cday == 1) && (cmonth == 1)){
+            return true;
+        }
+    }
+    return false;
+}
+
 function newReviews(){
     var reviews = document.getElementsByClassName("review-link");
-    var d = new Date();
     for(var i = 0; i < reviews.length; i++){
         var r = reviews[i].children[0].getAttribute("date");
         var day = r % 100;
@@ -108,7 +141,7 @@ function newReviews(){
         var year = r - month - day;
         month /= 100;
         year /= 10000;
-        if((day == d.getDate() || day == d.getDate() - 1) && month == (d.getMonth() + 1) && year == d.getFullYear()){
+        if(checkNew(day, month, year)){
             reviews[i].children[0].children[0].innerHTML = "<div class='new-review'>NEW</div>" + reviews[i].children[0].children[0].innerHTML;
         }
     }

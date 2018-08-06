@@ -142,7 +142,7 @@ function newReviews(){
         month /= 100;
         year /= 10000;
         if(checkNew(day, month, year)){
-            reviews[i].children[0].children[0].innerHTML = "<div class='new-review'>NEW</div>" + reviews[i].children[0].children[0].innerHTML;
+            reviews[i].children[0].children[0].innerHTML = reviews[i].children[0].children[0].innerHTML + "<div class='new-review'>NEW</div>";
         }
     }
 }

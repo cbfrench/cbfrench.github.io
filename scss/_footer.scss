@@ -1,4 +1,5 @@
 @import 'variables';
+
 #footer{
     height: 20rem;
     @include stripes($menu-color, $menu-hover);
@@ -30,6 +31,7 @@
         border: 5px white solid;
     }
 }
+
 #right-footer{
     display: inline-block;
     float: right;

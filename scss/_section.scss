@@ -1,4 +1,5 @@
 @import 'variables';
+
 .section{
     margin-top: -3rem;
     padding: 5rem 0;
@@ -21,6 +22,7 @@
         }
     }
 }
+
 .even{
     -webkit-clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));
     clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));

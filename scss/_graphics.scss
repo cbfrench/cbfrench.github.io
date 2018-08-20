@@ -1,4 +1,5 @@
 @import 'variables';
+
 .readme{
     padding-left: 15rem;
     padding-right: 15rem;
@@ -101,6 +102,7 @@
         }
     }
 }
+
 .video{
     font : {
         weight: 300;
@@ -129,6 +131,7 @@
         max-width: 10rem;
     }
 }
+
 .instructions{
     h4{
         font : {
@@ -145,6 +148,7 @@
         max-width: 10rem;
     }
 }
+
 .instruction-button{
     color: black;
     background: $background2;
@@ -160,12 +164,14 @@
         size: 1.5rem;
     }
 }
+
 .control-stick{
     background: radial-gradient($background2 1.15rem, $background3 1.3rem, $background2 1.45rem);
     height: 1rem;
     padding: 1.1rem;
     margin-bottom: -0.9rem;
 }
+
 .instruction-key{
     color: black;
     background: $background2;
@@ -181,6 +187,7 @@
         size: 1.5rem;
     }
 }
+
 .row{
     padding: 1rem 0;
     max-width: 75%;

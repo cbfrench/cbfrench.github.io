@@ -22,9 +22,11 @@ $break-phone: 415px;
     background: repeating-linear-gradient($angle, $color1, $color1 $bar-width, $color2 $bar-width, $color2 $bar-width*2);
     background-attachment: fixed;
 }
+
 @mixin transition{
     transition: all $time;
 }
+
 @mixin bp($breakpoint){
     @media only screen and (max-width: $breakpoint){
         @content;
@@ -47,10 +49,12 @@ body{
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
+
 p{
     @extend %no-margins;
     font-size: $font;
 }
+
 h1{
     @extend %no-margins;
     @include stripes($menu-color, $menu-hover);
@@ -69,6 +73,7 @@ h1{
         width: 100%;
     }
 }
+
 h2{
     @extend %no-margins;
     font : {
@@ -77,6 +82,7 @@ h2{
     }
     margin-bottom: 2rem;
 }
+
 h3{
     @extend %no-margins;
     font : {
@@ -87,14 +93,17 @@ h3{
     text-transform: uppercase;
     letter-spacing: 0.5rem;
 }
+
 h4{
     @extend %no-margins;
     margin-bottom: 1.75rem;
     font-weight: 400;
 }
+
 h5{
     @extend %no-margins;
 }
+
 h6{
     @extend %no-margins;
 }

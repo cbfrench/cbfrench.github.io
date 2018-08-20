@@ -1,4 +1,5 @@
 @import 'variables';
+
 .project-link{
     background-color: $menu-color;
     width: 15rem;
@@ -23,6 +24,7 @@
         }
     }
 }
+
 #github-link{
     color: $link-hover;
     @include transition;

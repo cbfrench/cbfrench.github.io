@@ -62,14 +62,14 @@
         text-align: left;
         margin-top: 2rem;
         font : {
-            size: 1.25rem;
+            size: $font;
             weight: 300;
         }
     }
     code{
         color: $link-hover;
         background: $background2;
-        font-size: 1.25rem;
+        font-size: $font;
         padding: 0rem 0.25rem;
         margin: auto;
         box-shadow: 1px 1px 1px black;

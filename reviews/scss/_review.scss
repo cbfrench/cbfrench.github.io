@@ -1,0 +1,141 @@
+@import 'variables';
+
+%serif-font{
+    font : {
+        weight: 300;
+        family: Georgia, 'Times New Roman', Times, serif;
+    }
+    text : {
+        transform: uppercase;
+        shadow: 2px 2px 2px $text-shadow-color, 1px 1px $text-shadow-color;
+    }
+}
+game{
+    font-style: italic;
+    color: $accent-color;
+}
+.row{
+    text-align: justify;
+    p{
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+    &.score{
+        background: $darker-main;
+        color: white;
+        margin: auto;
+    }
+    &.heading{
+        background: $main-color;
+        color: white;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    &.score.heading{
+        text-align: center;
+        margin-bottom: 0;
+        background: $main-color;
+    }
+}
+ul{
+    margin-bottom: 2rem;
+    list-style: none;
+}
+li{
+    padding-left: 1rem;
+    text-indent: -1rem;
+    margin-bottom: 0.25rem;
+    @include bp{
+        padding: 0 1rem;
+        text-indent: -2rem;
+    }
+}
+#pros li:before{
+    content: "+";
+    padding-right: 5px;
+}
+#cons li:before{
+    content: "-";
+    padding-right: 5px;
+}
+#left-score{
+    display: inline-block;
+    height: 100%;
+    float: left;
+    width: 45%;
+    text-align: left;
+    padding-top: 1rem;
+    @include bp{
+        height: 50%;
+        width: 100%;
+    }
+}
+
+#right-score{
+    display: inline-block;
+    height: 100%;
+    background: $accent-color;
+    -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    min-height: 15rem;
+    line-height: 5rem;
+    width: 55%;
+    padding-top: 5rem;
+    text-align: center;
+    @include bp{
+        height: 50%;
+        width: 100%;
+        -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+        h3, h4{
+            margin-left: 0;
+        }
+    }
+}
+#left-score h4{
+    text-align: center;
+}
+h1{
+    font-size: 5rem;
+    @extend %serif-font;
+    @include bp{
+        font-size: 4rem;
+    }
+}
+h2{
+    font-size: 2rem;
+    @extend %serif-font;
+}
+h3{
+    font-size: 5rem;
+    @extend %serif-font;
+}
+h4{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    @extend %serif-font;
+}
+h5{
+    font-size: 1.15rem;
+    text-align: center;
+    @extend %serif-font;
+}
+#right-score h3, #right-score h4{
+    margin-left: 2rem;
+    text-shadow: 5px 5px 2px $text-shadow-color, 1px 1px $text-shadow-color, 2px 2px $text-shadow-color, 3px 3px $text-shadow-color, 4px 4px $text-shadow-color;
+}
+.played-on{
+    text-align: center;
+    margin: auto;
+    img{
+        margin : {
+            top: 1rem;
+            bottom: 3rem;
+        }
+        max-width: 20rem;
+        @include bp{
+            max-width: 10rem;
+        }
+    }
+}

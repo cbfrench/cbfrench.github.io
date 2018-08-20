@@ -1,0 +1,109 @@
+@import 'variables';
+
+.content{
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+}
+.new-review{
+    position: absolute;
+    background: $accent-color;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
+    padding: 0 3rem 0 1rem;
+    float: left;
+    margin-top: -5rem;
+}
+.review-buttons{
+    white-space: nowrap;
+}
+.sorting.row{
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    margin: auto;
+}
+.sorting.row p{
+    margin: 0;
+    margin-top: 1rem;
+}
+#review-sort, #review-system{
+    border: 0;
+    display: inline-block;
+    width: 90%;
+    margin: 1rem 0;
+    background: $accent-color;
+    font: 400 1rem "Gill Sans";
+    height: 2.5rem;
+    text-align-last: center;
+    color: white;
+    cursor: pointer;
+    outline: 2px solid white; 
+    outline-offset:-2px;
+    @include transition;
+    &:hover{
+        background: rgba(232, 155, 31, 1);
+        width: 100%;
+    }
+}
+.review-link{
+    height: 5rem;
+    border: 2px solid $main-color;
+    box-shadow: 2px 2px 2px $box-shadow-color, 2px -2px 2px $box-shadow-color, -2px 2px 2px $box-shadow-color, -2px -2px 2px $box-shadow-color;
+    margin-bottom: 1rem;
+    @include transition;
+    cursor: pointer;
+    img{
+        max-width: 10rem;
+        max-height: 4.5rem;
+        margin: auto;
+        margin-top: 0.25rem;
+    }
+    &:hover{
+        background: $main-color;
+        margin : {
+            left: -1rem;
+            right: -1rem;
+        }
+    }
+    @include bp{
+        height: 10rem;
+    }
+}
+.left-review-link{
+    display: inline-block;
+    height: 100%;
+    width: 40%;
+    background: radial-gradient($main-color 0%, transparent 70%);
+    float: left;
+    text-align: center;
+    @include bp{
+        height: 50%;
+        width: 100%;
+    }
+}
+.right-review-link{
+    display: inline-block;
+    height: 100%;
+    width: 60%;
+    background: $main-color;
+    -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
+    line-height: 5rem;
+    color: white;
+    @include transition;
+    @include bp{
+        height: 50%;
+        width: 100%;
+        -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
+    }
+}

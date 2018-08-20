@@ -1,0 +1,58 @@
+$logo-width: 50%;
+$main-color: #22aaff;
+$darker-main: #0088dd;
+$accent-color: #ffaa22;
+$gray: #eeeeee;
+$text-shadow-color: rgba(0, 0, 0, 0.25);
+$box-shadow-color: rgba(34, 170, 255, 0.1);
+$speed: 0.2s;
+
+@mixin transition{
+    transition: all $speed;
+}
+@mixin bp{
+    @media only screen and (max-width: 500px){
+        @content;
+    }
+}
+
+body{
+    margin: auto;
+    font : {
+        family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        weight: 300;
+    }
+}
+%no-margin{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+p{
+    @extend %no-margin;   
+}
+h1{
+    @extend %no-margin;   
+}
+h2{
+    @extend %no-margin;   
+}
+h3{
+    @extend %no-margin;   
+}
+h4{
+    @extend %no-margin;   
+}
+h5{
+    @extend %no-margin;   
+}
+h6{
+    @extend %no-margin;   
+}
+ul{
+    @extend %no-margin;   
+}
+.row.centered{
+    text-align: center;
+}

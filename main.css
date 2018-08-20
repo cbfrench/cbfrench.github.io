@@ -413,6 +413,68 @@ h4 {
   margin: auto;
   margin-top: 0.35rem; }
 
+@media only screen and (max-width: 1200px) {
+  body .readme {
+    padding-left: 10rem;
+    padding-right: 10rem; }
+  body .row .i-contain {
+    text-align: justify; }
+    body .row .i-contain.r {
+      float: right;
+      text-align: right; } }
+@media only screen and (max-width: 800px) {
+  body .empty {
+    width: 10%; }
+  body textarea, body input {
+    width: 80%; }
+  body h1 {
+    font-size: 5rem;
+    width: 25rem; }
+  body #header a {
+    width: 50%;
+    display: inline-block;
+    height: 10rem; }
+  body .menu-button {
+    display: none; }
+    body .menu-button a {
+      height: initial !important;
+      width: 100% !important;
+      margin-bottom: 2rem; }
+  body .mobile-menu {
+    display: inline-block; }
+  body .readme {
+    padding-left: 5rem;
+    padding-right: 5rem; }
+  body .row .i-contain {
+    height: 11rem; } }
+@media only screen and (max-width: 415px) {
+  body h1 {
+    width: 100%; }
+  body #logo {
+    margin: auto;
+    width: 8rem;
+    top: 1.25rem; }
+  body .menu-button {
+    width: 15rem;
+    height: 4rem; }
+    body .menu-button a {
+      line-height: 4rem; }
+  body .empty {
+    width: 0; }
+  body #title {
+    background-attachment: scroll; }
+  body .section p, body .text-box {
+    max-width: 90%; }
+  body #right-footer {
+    font-size: 1rem;
+    margin-right: 1rem; }
+    body #right-footer p {
+      font-size: 1rem; }
+  body .readme {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    body .readme pre {
+      background: repeating-linear-gradient(#eeeeee, #eeeeee 1.15rem, #dddddd 1.15rem, #dddddd 2.35rem); } }
 body {
   margin: 0;
   font-family: Oswald;

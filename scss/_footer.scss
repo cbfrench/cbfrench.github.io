@@ -1,0 +1,67 @@
+@import 'variables';
+#footer{
+    height: 20rem;
+    @include stripes($menu-color, $menu-hover);
+    color: $menu-text;
+    text-align: center;
+}
+
+#left-footer{
+    display: inline-block;
+    float: initial;
+    width: 13.5rem;
+    height: 15rem;
+    padding: 0.5rem 0 1rem 0;
+    margin-top: 1.5rem;
+    background-color: $frame;
+    a{
+        color: $menu-text;
+        @include transition;
+        &:hover{
+            color: $footer-color;
+        }
+    }
+    img{
+        height: 15rem;
+        padding-bottom: 0;
+        border: 5px white solid;
+    }
+}
+#right-footer{
+    display: inline-block;
+    float: right;
+    padding-top: 2.5rem;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    width: 30%;
+    a{
+        color: $menu-text;
+        @include transition;
+        &:hover{
+            color: $footer-color;
+        }
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+.empty{
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+}
+
+#small-footer{
+    background-color: $footer-color;
+    width: 100%;
+    height: 3rem;
+    color: $menu-text;
+    line-height: 3rem;
+    text-align: center;
+    position: absolute;
+    font : {
+        weight: 200;
+        size: $font;
+    }
+}

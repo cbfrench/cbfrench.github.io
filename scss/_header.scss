@@ -1,0 +1,52 @@
+@import 'variables';
+#header{
+    background-color: white;
+    text-align: center;
+}
+.menu-button{
+    display: inline-block;
+    height: 8rem;
+    width: 10rem;
+    font-weight: 200;
+    a{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        line-height: 8rem;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+        @include transition;
+        &:hover{
+            color: white;
+            background-color: $menu-hover;
+        }
+    }
+}
+#logo{
+    width: 7rem;
+    position: relative;
+    top: 2.75rem;
+    margin-top: -3.5rem;
+    cursor: pointer;
+    padding: 0 3rem;
+}
+#title{
+    padding-top: 20rem;
+    height: 20rem;
+    width: 100%;
+    color: $menu-text; 
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    text : {
+        align: center;
+        transform: uppercase;
+    }
+    background : {
+        image: url('pictures/code.jpg');
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+}

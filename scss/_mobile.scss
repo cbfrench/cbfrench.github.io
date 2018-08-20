@@ -1,0 +1,23 @@
+@import 'variables';
+.mobile-menu{
+    height: 4.75rem;
+    width: 49%;
+    display: none;
+}
+
+.mobile-button{
+    width: 4rem;
+    background: $menu-color;
+    height: 2rem;
+    margin: auto;
+    padding: 0.5rem 0 1.5rem 0;
+    float: right;
+    margin-right: 4rem;
+}
+.line{
+    background: white;
+    height: 0.5rem;
+    width: 75%;
+    margin: auto;
+    margin-top: 0.35rem;
+}

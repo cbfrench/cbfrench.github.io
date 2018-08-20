@@ -1,0 +1,192 @@
+@import 'variables';
+.readme{
+    padding-left: 15rem;
+    padding-right: 15rem;
+    pre{
+        margin: 2rem;
+        text-align: left;
+        background: repeating-linear-gradient($background, $background 1.2rem, $background2 1.2rem, $background2 2.4rem);
+        max-width: 300px;
+        padding: 1.1rem;
+        border-radius: 0.5rem;
+        border: 2px solid $background2;
+        box-shadow: 2px 2px 5px black;
+        code{
+            color: $link-hover;
+            padding: 0;
+            font-size: 1rem;
+            background: initial;
+            box-shadow: none;
+        }
+    }
+    p{
+        text-align: left;
+        margin: initial;
+        font-size: 1rem;
+    }
+    h2{
+        text-align: center;
+        @include stripes($menu-color, $menu-hover);
+        color: $menu-text;
+        &:nth-child(1){
+            background: transparent;
+            color: initial;
+        }
+    }
+    h3{
+        margin: initial;
+        text-transform: initial;
+        letter-spacing: initial;
+        @include stripes($menu-color, $menu-hover);
+        color: $menu-text;
+        font : {
+            weight: 300;
+            size: 1.5rem;
+        }
+    }
+    h4{
+        text-align: left;
+        font : {
+            size: 1rem;
+            weight: 300;
+        }
+        margin : {
+            top: 0;
+            bottom: 0;
+        }
+    }
+    h5{
+        text-align: left;
+        margin-top: 2rem;
+        font : {
+            size: 1.25rem;
+            weight: 300;
+        }
+    }
+    code{
+        color: $link-hover;
+        background: $background2;
+        font-size: 1.25rem;
+        padding: 0rem 0.25rem;
+        margin: auto;
+        box-shadow: 1px 1px 1px black;
+        margin : {
+            right: 0.2rem;
+            left: 0.1rem;
+        }
+    }
+    hr{
+        margin: 1rem 0;
+        border: 1px solid transparent;
+    }
+}
+.video{
+    font : {
+        weight: 300;
+        size: 1.5rem;
+    }
+    p{
+        margin-bottom: 1rem;
+    }
+    video{
+        width: 90%;
+        max-width: 1000px;
+        margin-bottom: 2rem;
+    }
+    h4{
+        font : {
+            weight: 300;
+            size: 1.5rem;
+        }
+        margin: auto;
+        margin : {
+            top: 2rem;
+            bottom: 0;
+        }
+        @include stripes($menu-color, $menu-hover);
+        color: $menu-text;
+        max-width: 10rem;
+    }
+}
+.instructions{
+    h4{
+        font : {
+            weight: 300;
+            size: 1.5rem;
+        }
+        margin: auto;
+        margin : {
+            top: 2rem;
+            bottom: 0;
+        }
+        @include stripes($menu-color, $menu-hover);
+        color: $menu-text;
+        max-width: 10rem;
+    }
+}
+.instruction-button{
+    color: black;
+    background: $background2;
+    border-radius: 5rem;
+    padding: 0.5rem 1.1rem;
+    width: 1rem;
+    display: inline-block;
+    box-shadow: 3px 2px $background3;
+    margin-right: 1rem;
+    text-align: center;
+    font : {
+        weight: 700;
+        size: 1.5rem;
+    }
+}
+.control-stick{
+    background: radial-gradient($background2 1.15rem, $background3 1.3rem, $background2 1.45rem);
+    height: 1rem;
+    padding: 1.1rem;
+    margin-bottom: -0.9rem;
+}
+.instruction-key{
+    color: black;
+    background: $background2;
+    padding: 0.5rem 0.85rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    min-width: 1.5rem;
+    box-shadow: 3px 2px $background3;
+    margin-right: 1rem;
+    text-align: center;
+    font : {
+        weight: 700;
+        size: 1.5rem;
+    }
+}
+.row{
+    padding: 1rem 0;
+    max-width: 75%;
+    margin: auto;
+    margin : {
+        top: 1rem;
+        bottom: 1rem;
+    }
+    p{
+        display: inline-block;
+        margin : {
+            left: 1rem;
+            right: 1rem;
+        }
+    }
+    .i-contain{
+        display: inline-block;
+        width: 49%;
+        height: 3.4rem;
+        text-align: center;
+        p{
+            line-height: 3.4rem;
+        }
+        &.r{
+            p{
+                text-align: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+$time: 0.2s;
+$menu-color: #dd8d00;
+$menu-hover: #ee9d00;
+$frame: #ffbd00;
+$body-text: #000000;
+$menu-text: #f3f3f3;
+$link-hover: #8a2d00;
+$background: #eeeeee;
+$background2: #dddddd;
+$background3: #aaaaaa;
+$footer-color: #004880;
+$mobile-width: 90%;
+$width: 75%;
+$angle: 120deg;
+$bar-width: 60px;
+$font: 1.25rem;
+@mixin stripes($color1, $color2){
+    background: repeating-linear-gradient($angle, $color1, $color1 $bar-width, $color2 $bar-width, $color2 $bar-width*2);
+    background-attachment: fixed;
+}
+@mixin transition{
+    transition: all $time;
+}
+
+body{
+    margin: 0;
+    font : {
+        family: Oswald;
+        weight: 300;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+%no-margins{
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+p{
+    @extend %no-margins;
+    font-size: $font;
+}
+h1{
+    @extend %no-margins;
+    @include stripes($menu-color, $menu-hover);
+    font : {
+        weight: 100;
+        size: 6rem;
+    }
+    margin: auto;
+    margin-top: -6rem;
+    width: 30rem;
+}
+h2{
+    @extend %no-margins;
+    font : {
+        weight: 200;
+        size: 2rem;
+    }
+    margin-bottom: 2rem;
+}
+h3{
+    @extend %no-margins;
+    font : {
+        weight: 300;
+        size: 2rem;
+    }
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+h4{
+    @extend %no-margins;
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+}
+h5{
+    @extend %no-margins;
+}
+h6{
+    @extend %no-margins;
+}

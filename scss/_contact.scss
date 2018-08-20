@@ -1,0 +1,37 @@
+@import 'variables';
+.contact{
+    p{
+        text-align: center !important;
+    }
+    input, textarea{
+        line-height: 2rem;
+        background-color: $background;
+        border: none;
+        resize: none;
+        margin-bottom: 1rem;
+        outline-color: $menu-color;
+        font : {
+            size: 2rem;
+            family: "Oswald", sans-serif;
+            weight: 200;
+        }
+    }
+    input[type="submit"]{
+        background-color: $menu-color;
+        color: $menu-text;
+        font : {
+            size: 1.5rem;
+            family: "Oswald", sans-serif;
+            weight: 200;
+        }
+        padding: 1rem 3rem;
+        border-radius: .5rem;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        cursor: pointer;
+        @include transition;
+        &:hover{
+            background-color: $footer-color;
+        }
+    }
+}

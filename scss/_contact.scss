@@ -15,6 +15,9 @@
             family: "Oswald", sans-serif;
             weight: 200;
         }
+        @include bp($break-small){
+            width: 80%;
+        }
     }
     input[type="submit"]{
         background-color: $menu-color;

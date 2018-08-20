@@ -14,12 +14,21 @@ $width: 75%;
 $angle: 120deg;
 $bar-width: 60px;
 $font: 1.25rem;
+$break-large: 1200px;
+$break-small: 800px;
+$break-phone: 415px;
+
 @mixin stripes($color1, $color2){
     background: repeating-linear-gradient($angle, $color1, $color1 $bar-width, $color2 $bar-width, $color2 $bar-width*2);
     background-attachment: fixed;
 }
 @mixin transition{
     transition: all $time;
+}
+@mixin bp($breakpoint){
+    @media only screen and (max-width: $breakpoint){
+        @content;
+    }
 }
 
 body{
@@ -52,6 +61,13 @@ h1{
     margin: auto;
     margin-top: -6rem;
     width: 30rem;
+    @include bp($break-small){
+        font-size: 5rem;
+        width: 25rem;
+    }
+    @include bp($break-phone){
+        width: 100%;
+    }
 }
 h2{
     @extend %no-margins;

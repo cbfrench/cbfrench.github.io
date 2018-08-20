@@ -43,6 +43,13 @@
     }
     p{
         font-size: 1.5rem;
+        @include bp($break-phone){
+            font-size: 1rem;
+        }
+    }
+    @include bp($break-phone){
+        font-size: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -50,6 +57,12 @@
     width: 20%;
     height: 100%;
     display: inline-block;
+    @include bp($break-small){
+        width: 10%;
+    }
+    @include bp($break-phone){
+        width: 0;
+    }
 }
 
 #small-footer{

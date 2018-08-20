@@ -11,6 +11,9 @@
         max-width: $width;
         margin: auto;
         text-align: center;
+        @include bp($break-phone){
+            max-width: $mobile-width;
+        }
     }
     &.readme{
         p{

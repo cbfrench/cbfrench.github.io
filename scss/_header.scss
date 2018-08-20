@@ -2,6 +2,13 @@
 #header{
     background-color: white;
     text-align: center;
+    a{
+        @include bp($break-small){
+            width: 50%;
+            display: inline-block;
+            height: 10rem;
+        }
+    }
 }
 .menu-button{
     display: inline-block;
@@ -22,6 +29,14 @@
             color: white;
             background-color: $menu-hover;
         }
+        @include bp($break-phone){
+            height: initial !important;
+            width: 100% !important;
+            margin-bottom: 2rem;
+        }
+    }
+    @include bp($break-small){
+        display: none;
     }
 }
 #logo{
@@ -31,6 +46,11 @@
     margin-top: -3.5rem;
     cursor: pointer;
     padding: 0 3rem;
+    @include bp($break-phone){
+        margin: auto;
+        width: 8rem;
+        top: 1.25rem;
+    }
 }
 #title{
     padding-top: 20rem;

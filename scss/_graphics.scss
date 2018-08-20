@@ -18,6 +18,9 @@
             background: initial;
             box-shadow: none;
         }
+        @include bp($break-phone){
+            background: repeating-linear-gradient($background, $background 1.15rem, $background2 1.15rem, $background2 2.35rem);
+        }
     }
     p{
         text-align: left;
@@ -78,6 +81,24 @@
     hr{
         margin: 1rem 0;
         border: 1px solid transparent;
+    }
+    @include bp($break-large){
+        padding : {
+            left: 10rem;
+            right: 10rem;
+        }
+    }
+    @include bp($break-small){
+        padding : {
+            left: 5rem;
+            right: 5rem;
+        }
+    }
+    @include bp($break-phone){
+        padding : {
+            left: 1rem;
+            right: 1rem;
+        }
     }
 }
 .video{
@@ -187,6 +208,16 @@
             p{
                 text-align: right;
             }
+        }
+        @include bp($break-large){
+            text-align: justify;
+            &.r{
+                float: right;
+                text-align: right;
+            }
+        }
+        @include bp($break-small){
+            height: 11rem;
         }
     }
 }

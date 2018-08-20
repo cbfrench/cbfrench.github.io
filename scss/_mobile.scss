@@ -3,6 +3,9 @@
     height: 4.75rem;
     width: 49%;
     display: none;
+    @include bp($break-small){
+        display: inline-block;
+    }
 }
 
 .mobile-button{
@@ -22,6 +25,7 @@
     margin-top: 0.35rem;
 }
 
+/*
 @media only screen and (max-width: 1200px){
     body{
         .readme{
@@ -130,3 +134,4 @@
         }
     }
 }   
+*/

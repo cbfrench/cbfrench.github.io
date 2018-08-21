@@ -23,7 +23,7 @@ $break-phone: 415px;
     background-attachment: fixed;
 }
 
-@mixin transition{
+%transition{
     transition: all $time;
 }
 
@@ -62,8 +62,9 @@ h1{
         weight: 100;
         size: 6rem;
     }
-    margin: auto;
-    margin-top: -6rem;
+    margin: auto{
+        top: -6rem;
+    }
     width: 30rem;
     @include bp($break-small){
         font-size: 5rem;

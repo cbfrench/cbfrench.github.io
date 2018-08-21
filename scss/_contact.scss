@@ -1,5 +1,3 @@
-@import 'variables';
-
 .contact{
     p{
         text-align: center !important;
@@ -33,7 +31,7 @@
         text-transform: uppercase;
         -webkit-appearance: none;
         cursor: pointer;
-        @include transition;
+        @extend %transition;
         &:hover{
             background-color: $footer-color;
         }

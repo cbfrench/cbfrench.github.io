@@ -1,50 +1,5 @@
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
+.menu-button a, #logo, #left-footer a, #right-footer a, .project-link a, #github-link, .contact input[type="submit"] {
+  transition: all 0.2s; }
 
 body {
   margin: 0;
@@ -68,7 +23,7 @@ h1 {
   font-weight: 100;
   font-size: 6rem;
   margin: auto;
-  margin-top: -6rem;
+    margin-top: -6rem;
   width: 30rem; }
   @media only screen and (max-width: 800px) {
     h1 {
@@ -116,8 +71,7 @@ h4 {
     color: black;
     text-transform: uppercase;
     font-size: 1.5rem;
-    letter-spacing: 0.25rem;
-    transition: all 0.2s; }
+    letter-spacing: 0.25rem; }
     .menu-button a:hover {
       color: white;
       background-color: #ee9d00; }
@@ -138,8 +92,7 @@ h4 {
   top: 5rem;
   margin-top: -4rem;
   cursor: pointer;
-  padding: 0 3rem;
-  transition: all 0.2s; }
+  padding: 0 3rem; }
   @media only screen and (max-width: 415px) {
     #logo {
       margin-top: 0;
@@ -164,54 +117,6 @@ h4 {
   background-size: cover;
   background-attachment: fixed; }
 
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
-
 #footer {
   height: 20rem;
   background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
@@ -231,8 +136,7 @@ h4 {
   margin-top: 1.5rem;
   background-color: #ffbd00; }
   #left-footer a {
-    color: #f3f3f3;
-    transition: all 0.2s; }
+    color: #f3f3f3; }
     #left-footer a:hover {
       color: #004880; }
   #left-footer img {
@@ -248,8 +152,7 @@ h4 {
   font-size: 1.5rem;
   width: 30%; }
   #right-footer a {
-    color: #f3f3f3;
-    transition: all 0.2s; }
+    color: #f3f3f3; }
     #right-footer a:hover {
       color: #004880; }
   #right-footer p {
@@ -280,54 +183,6 @@ h4 {
   font-weight: 200;
   font-size: 1.25rem; }
 
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
-
 .section {
   margin-top: -3rem;
   padding: 5rem 0;
@@ -350,59 +205,11 @@ h4 {
   -webkit-clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));
   clip-path: polygon(0 1.5vw, 50% 0, 100% 1.5vw, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw)); }
 
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
-
 .project-link {
   background-color: #dd8d00;
   width: 15rem;
   margin: auto;
-  margin-top: 2rem;
+    margin-top: 2rem;
   height: 5rem;
   line-height: 5rem;
   font-size: 1.25rem;
@@ -415,64 +222,14 @@ h4 {
     width: 100%;
     display: inline-block;
     color: #f3f3f3;
-    border-radius: 0.75rem;
-    transition: all 0.2s; }
+    border-radius: 0.75rem; }
     .project-link a:hover {
       background-color: #004880; }
 
 #github-link {
-  color: #8a2d00;
-  transition: all 0.2s; }
+  color: #8a2d00; }
   #github-link:hover {
     color: #dd8d00; }
-
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
 
 .mobile-menu {
   height: 4.75rem;
@@ -487,64 +244,16 @@ h4 {
   background: #dd8d00;
   height: 2rem;
   margin: auto;
+    margin-right: 4rem;
   padding: 0.5rem 0 1.5rem 0;
-  float: right;
-  margin-right: 4rem; }
+  float: right; }
 
 .line {
   background: white;
   height: 0.5rem;
   width: 75%;
   margin: auto;
-  margin-top: 0.35rem; }
-
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
+    margin-top: 0.35rem; }
 
 .contact p {
   text-align: center !important; }
@@ -571,58 +280,9 @@ h4 {
   border-radius: .5rem;
   text-transform: uppercase;
   -webkit-appearance: none;
-  cursor: pointer;
-  transition: all 0.2s; }
+  cursor: pointer; }
   .contact input[type="submit"]:hover {
     background-color: #004880; }
-
-body {
-  margin: 0;
-  font-family: Oswald;
-  font-weight: 300; }
-  body a {
-    text-decoration: none; }
-
-p, h1, h2, h3, h4, h5, h6 {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-p {
-  font-size: 1.25rem; }
-
-h1 {
-  background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
-  background-attachment: fixed;
-  font-weight: 100;
-  font-size: 6rem;
-  margin: auto;
-  margin-top: -6rem;
-  width: 30rem; }
-  @media only screen and (max-width: 800px) {
-    h1 {
-      font-size: 5rem;
-      width: 25rem; } }
-  @media only screen and (max-width: 415px) {
-    h1 {
-      width: 100%; } }
-
-h2 {
-  font-weight: 200;
-  font-size: 2rem;
-  margin-bottom: 2rem; }
-
-h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem; }
-
-h4 {
-  margin-bottom: 1.75rem;
-  font-weight: 400; }
 
 .readme {
   padding-left: 15rem;
@@ -633,8 +293,8 @@ h4 {
     background: repeating-linear-gradient(#eeeeee, #eeeeee 1.2rem, #dddddd 1.2rem, #dddddd 2.4rem);
     max-width: 300px;
     padding: 1.1rem;
-    border-radius: 0.5rem;
     border: 2px solid #dddddd;
+      border-radius: 0.5rem;
     box-shadow: 2px 2px 5px black; }
     .readme pre code {
       color: #8a2d00;
@@ -682,10 +342,10 @@ h4 {
     background: #dddddd;
     font-size: 1.25rem;
     padding: 0rem 0.25rem;
-    margin: auto;
     box-shadow: 1px 1px 1px black;
-    margin-right: 0.2rem;
-    margin-left: 0.1rem; }
+    margin: auto;
+      margin-right: 0.2rem;
+      margin-left: 0.1rem; }
   .readme hr {
     margin: 1rem 0;
     border: 1px solid transparent; }
@@ -715,8 +375,8 @@ h4 {
     font-weight: 300;
     font-size: 1.5rem;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 0;
+      margin-top: 2rem;
+      margin-bottom: 0;
     background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
     background-attachment: fixed;
     color: #f3f3f3;
@@ -726,8 +386,8 @@ h4 {
   font-weight: 300;
   font-size: 1.5rem;
   margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
   background: repeating-linear-gradient(120deg, #dd8d00, #dd8d00 60px, #ee9d00 60px, #ee9d00 120px);
   background-attachment: fixed;
   color: #f3f3f3;
@@ -769,8 +429,8 @@ h4 {
   padding: 1rem 0;
   max-width: 75%;
   margin: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
   .row p {
     display: inline-block;
     margin-left: 1rem;

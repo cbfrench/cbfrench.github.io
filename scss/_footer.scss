@@ -1,5 +1,3 @@
-@import 'variables';
-
 #footer{
     height: 20rem;
     @include stripes($menu-color, $menu-hover);
@@ -20,7 +18,7 @@
     background-color: $frame;
     a{
         color: $menu-text;
-        @include transition;
+        @extend %transition;
         &:hover{
             color: $footer-color;
         }
@@ -41,7 +39,7 @@
     width: 30%;
     a{
         color: $menu-text;
-        @include transition;
+        @extend %transition;
         &:hover{
             color: $footer-color;
         }

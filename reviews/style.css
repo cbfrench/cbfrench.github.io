@@ -1,16 +1,5 @@
-body {
-  margin: auto;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 300; }
-
-p, h1, h2, h3, h4, h5, h6, ul {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-.row.centered {
-  text-align: center; }
+.menu-button a, .menu-logo, .menu-logo img, #review-sort, #review-system, .review-link, .right-review-link {
+  transition: all 0.2s; }
 
 body {
   margin: auto;
@@ -54,7 +43,6 @@ p, h1, h2, h3, h4, h5, h6, ul {
     margin-left: -1rem;
     color: white;
     text-decoration: none;
-    transition: all 0.2s;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25), 1px 1px rgba(0, 0, 0, 0.25); }
     .menu-button a:hover {
       background: rgba(0, 0, 0, 0.1); }
@@ -72,8 +60,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
   display: inline-block;
   padding: 1rem;
   margin: 0 -1.5rem;
-  cursor: pointer;
-  transition: all 0.2s; }
+  cursor: pointer; }
   .menu-logo:hover {
     background: rgba(0, 0, 0, 0.1); }
     .menu-logo:hover img:not(:hover) {
@@ -85,11 +72,10 @@ p, h1, h2, h3, h4, h5, h6, ul {
         .menu-logo:hover img:not(:hover) {
           max-width: 5.5rem;
           margin: 0;
-          margin-top: 0.5rem; } }
+            margin-top: 0.5rem; } }
   .menu-logo img {
     max-width: 5rem;
-    margin-bottom: -3.5rem;
-    transition: all 0.2s; }
+    margin-bottom: -3.5rem; }
     .menu-logo img:hover {
       max-width: 5.5rem;
       margin-top: -0.5rem;
@@ -99,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
         .menu-logo img:hover {
           max-width: 5.5rem;
           margin: 0;
-          margin-top: 0.5rem; } }
+            margin-margin-top: 0.5rem; } }
     @media only screen and (max-width: 500px) {
       .menu-logo img {
         margin-top: 1rem;
@@ -124,20 +110,6 @@ p, h1, h2, h3, h4, h5, h6, ul {
   max-width: 50%;
   max-height: 15rem;
   padding-top: 1rem; }
-
-body {
-  margin: auto;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 300; }
-
-p, h1, h2, h3, h4, h5, h6, ul {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-.row.centered {
-  text-align: center; }
 
 .content {
   margin: auto;
@@ -172,7 +144,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
 
 .sorting.row p {
   margin: 0;
-  margin-top: 1rem; }
+    margin-top: 1rem; }
 
 #review-sort, #review-system {
   border: 0;
@@ -186,8 +158,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
   color: white;
   cursor: pointer;
   outline: 2px solid white;
-  outline-offset: -2px;
-  transition: all 0.2s; }
+    outline-offset: -2px; }
   #review-sort:hover, #review-system:hover {
     background: #e89b1f;
     width: 100%; }
@@ -197,13 +168,12 @@ p, h1, h2, h3, h4, h5, h6, ul {
   border: 2px solid #22aaff;
   box-shadow: 2px 2px 2px rgba(34, 170, 255, 0.1), 2px -2px 2px rgba(34, 170, 255, 0.1), -2px 2px 2px rgba(34, 170, 255, 0.1), -2px -2px 2px rgba(34, 170, 255, 0.1);
   margin-bottom: 1rem;
-  transition: all 0.2s;
   cursor: pointer; }
   .review-link img {
     max-width: 10rem;
     max-height: 4.5rem;
     margin: auto;
-    margin-top: 0.25rem; }
+      margin-top: 0.25rem; }
   .review-link:hover {
     background: #22aaff;
     margin-left: -1rem;
@@ -232,28 +202,13 @@ p, h1, h2, h3, h4, h5, h6, ul {
   -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
   line-height: 5rem;
-  color: white;
-  transition: all 0.2s; }
+  color: white; }
   @media only screen and (max-width: 500px) {
     .right-review-link {
       height: 50%;
       width: 100%;
       -webkit-clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%);
       clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%); } }
-
-body {
-  margin: auto;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 300; }
-
-p, h1, h2, h3, h4, h5, h6, ul {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-.row.centered {
-  text-align: center; }
 
 h1, h2, h3, h4, h5 {
   font-weight: 300;
@@ -375,20 +330,6 @@ h5 {
     @media only screen and (max-width: 500px) {
       .played-on img {
         max-width: 10rem; } }
-
-body {
-  margin: auto;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 300; }
-
-p, h1, h2, h3, h4, h5, h6, ul {
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-
-.row.centered {
-  text-align: center; }
 
 .footer {
   width: 100%;

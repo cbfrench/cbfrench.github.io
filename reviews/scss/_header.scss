@@ -1,5 +1,3 @@
-@import 'variables';
-
 .menu{
     background: $accent-color;
     margin-top: 0;
@@ -31,9 +29,11 @@
         padding: 0 1rem;
         margin-left: -1rem;
         color: white;
-        text-decoration: none;
-        @include transition;
-        text-shadow: 2px 2px 2px $text-shadow-color, 1px 1px $text-shadow-color;
+        @extend %transition;
+        text : {
+            decoration: none;
+            shadow: 2px 2px 2px $text-shadow-color, 1px 1px $text-shadow-color;
+        }
         &:hover{
             background: rgba(0, 0, 0, 0.1);
         }
@@ -53,7 +53,7 @@
     padding: 1rem;
     margin: 0 -1.5rem;
     cursor: pointer;
-    @include transition;
+    @extend %transition;
     &:hover{
         background: rgba(0, 0, 0, 0.1);
         img:not(:hover){
@@ -65,15 +65,16 @@
             }
             @include bp{
                 max-width: 5.5rem;
-                margin: 0;
-                margin-top: 0.5rem;
+                margin: 0{
+                    top: 0.5rem;
+                }
             }
         }
     }
     img{
         max-width: 5rem;
         margin-bottom: -3.5rem;
-        @include transition;
+        @extend %transition;
         &:hover{
             max-width: 5.5rem;
             margin : {
@@ -83,8 +84,9 @@
             }
             @include bp{
                 max-width: 5.5rem;
-                margin: 0;
-                margin-top: 0.5rem;
+                margin: 0{
+                    margin-top: 0.5rem;
+                }
             }
         }
         @include bp{

@@ -1,10 +1,9 @@
-@import 'variables';
-
 .project-link{
     background-color: $menu-color;
     width: 15rem;
-    margin: auto;
-    margin-top: 2rem;
+    margin: auto{
+        top: 2rem;
+    }
     height: 5rem;
     line-height: 5rem;
     font-size: $font;
@@ -18,7 +17,7 @@
         display: inline-block;
         color: $menu-text;
         border-radius: 0.75rem;
-        @include transition;
+        @extend %transition;
         &:hover{
             background-color: $footer-color;
         }
@@ -27,7 +26,7 @@
 
 #github-link{
     color: $link-hover;
-    @include transition;
+    @extend %transition;
     &:hover{
         color: $menu-color;
     }

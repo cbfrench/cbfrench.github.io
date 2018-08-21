@@ -1,16 +1,17 @@
-@import 'variables';
-
 .readme{
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding : {
+        left: 15rem;
+        right: 15rem;
+    }
     pre{
         margin: 2rem;
         text-align: left;
         background: repeating-linear-gradient($background, $background 1.2rem, $background2 1.2rem, $background2 2.4rem);
         max-width: 300px;
         padding: 1.1rem;
-        border-radius: 0.5rem;
-        border: 2px solid $background2;
+        border: 2px solid $background2{
+            radius: 0.5rem;
+        }
         box-shadow: 2px 2px 5px black;
         code{
             color: $link-hover;
@@ -72,9 +73,8 @@
         background: $background2;
         font-size: $font;
         padding: 0rem 0.25rem;
-        margin: auto;
         box-shadow: 1px 1px 1px black;
-        margin : {
+        margin : auto{
             right: 0.2rem;
             left: 0.1rem;
         }
@@ -121,8 +121,7 @@
             weight: 300;
             size: 1.5rem;
         }
-        margin: auto;
-        margin : {
+        margin : auto{
             top: 2rem;
             bottom: 0;
         }
@@ -138,8 +137,7 @@
             weight: 300;
             size: 1.5rem;
         }
-        margin: auto;
-        margin : {
+        margin : auto{
             top: 2rem;
             bottom: 0;
         }
@@ -191,8 +189,7 @@
 .row{
     padding: 1rem 0;
     max-width: 75%;
-    margin: auto;
-    margin : {
+    margin : auto{
         top: 1rem;
         bottom: 1rem;
     }

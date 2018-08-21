@@ -1,5 +1,3 @@
-@import 'variables';
-
 #header{
     background-color: white;
     text-align: center;
@@ -26,7 +24,7 @@
         text-transform: uppercase;
         font-size: 1.5rem;
         letter-spacing: 0.25rem;
-        @include transition;
+        @extend %transition;
         &:hover{
             color: white;
             background-color: $menu-hover;
@@ -52,7 +50,7 @@
     margin-top: -4rem;
     cursor: pointer;
     padding: 0 3rem;
-    @include transition;
+    @extend %transition;
     @include bp($break-phone){
         margin-top: 0;
         top: 4rem;

@@ -168,7 +168,10 @@ p, h1, h2, h3, h4, h5, h6, ul {
   border: 2px solid #22aaff;
   box-shadow: 2px 2px 2px rgba(34, 170, 255, 0.1), 2px -2px 2px rgba(34, 170, 255, 0.1), -2px 2px 2px rgba(34, 170, 255, 0.1), -2px -2px 2px rgba(34, 170, 255, 0.1);
   margin-bottom: 1rem;
+  white-space: nowrap;
   cursor: pointer; }
+  .review-link a {
+    color: white; }
   .review-link img {
     max-width: 10rem;
     max-height: 4.5rem;
@@ -187,7 +190,6 @@ p, h1, h2, h3, h4, h5, h6, ul {
   height: 100%;
   width: 40%;
   background: radial-gradient(#22aaff 0%, transparent 70%);
-  float: left;
   text-align: center; }
   @media only screen and (max-width: 500px) {
     .left-review-link {
@@ -202,7 +204,8 @@ p, h1, h2, h3, h4, h5, h6, ul {
   -webkit-clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(5vw 0, 100% 0, 100% 100%, 0 100%);
   line-height: 5rem;
-  color: white; }
+  color: white;
+  vertical-align: top; }
   @media only screen and (max-width: 500px) {
     .right-review-link {
       height: 50%;

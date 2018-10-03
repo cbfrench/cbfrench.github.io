@@ -129,7 +129,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
   line-height: 5rem;
   -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
   clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
-  padding: 0 3rem 0 1rem;
+  padding: 0 5rem 0 1rem;
   float: left;
   margin-top: -5rem; }
 

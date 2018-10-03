@@ -171,7 +171,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
   white-space: nowrap;
   cursor: pointer; }
   .review-link a {
-    color: white; }
+    color: transparent; }
   .review-link img {
     max-width: 10rem;
     max-height: 4.5rem;

@@ -173,8 +173,7 @@ p, h1, h2, h3, h4, h5, h6, ul {
   .review-link a {
     color: transparent; }
   .review-link img {
-    max-width: 10rem;
-    max-height: 4.5rem;
+    height: 4.5rem;
     margin: auto;
       margin-top: 0.25rem; }
   .review-link:hover {

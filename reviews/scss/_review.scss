@@ -17,6 +17,8 @@ game{
     p{
         margin-bottom: 1.5rem;
         display: inline-block;
+        font-size: 1.25rem;
+        line-height: 2rem;
     }
     &.score{
         background: $darker-main;

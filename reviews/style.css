@@ -231,7 +231,9 @@ game {
   text-align: justify; }
   .row p {
     margin-bottom: 1.5rem;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 2rem; }
   .row.score {
     background: #0088dd;
     color: white;

@@ -271,6 +271,8 @@ li {
   width: 45%;
   text-align: left;
   padding-top: 1rem; }
+  #left-score h4 {
+    text-align: center; }
   @media only screen and (max-width: 500px) {
     #left-score {
       height: 50%;
@@ -287,6 +289,9 @@ li {
   width: 55%;
   padding-top: 5rem;
   text-align: center; }
+  #right-score h3, #right-score h4 {
+    margin-left: 2rem;
+    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25), 1px 1px rgba(0, 0, 0, 0.25), 2px 2px rgba(0, 0, 0, 0.25), 3px 3px rgba(0, 0, 0, 0.25), 4px 4px rgba(0, 0, 0, 0.25); }
   @media only screen and (max-width: 500px) {
     #right-score {
       height: 50%;
@@ -295,9 +300,6 @@ li {
       clip-path: polygon(0 2.5vh, 100% 0, 100% 100%, 0 100%); }
       #right-score h3, #right-score h4 {
         margin-left: 0; } }
-
-#left-score h4 {
-  text-align: center; }
 
 h1 {
   font-size: 5rem; }
@@ -318,10 +320,6 @@ h4 {
 h5 {
   font-size: 1.15rem;
   text-align: center; }
-
-#right-score h3, #right-score h4 {
-  margin-left: 2rem;
-  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.25), 1px 1px rgba(0, 0, 0, 0.25), 2px 2px rgba(0, 0, 0, 0.25), 3px 3px rgba(0, 0, 0, 0.25), 4px 4px rgba(0, 0, 0, 0.25); }
 
 .played-on {
   text-align: center;

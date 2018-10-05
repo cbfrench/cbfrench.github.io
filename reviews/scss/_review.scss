@@ -64,6 +64,9 @@ li{
     width: 45%;
     text-align: left;
     padding-top: 1rem;
+    h4{
+        text-align: center;
+    }
     @include bp{
         height: 50%;
         width: 100%;
@@ -81,6 +84,10 @@ li{
     width: 55%;
     padding-top: 5rem;
     text-align: center;
+    h3, h4{
+        margin-left: 2rem;
+        text-shadow: 5px 5px 2px $text-shadow-color, 1px 1px $text-shadow-color, 2px 2px $text-shadow-color, 3px 3px $text-shadow-color, 4px 4px $text-shadow-color;
+    }
     @include bp{
         height: 50%;
         width: 100%;
@@ -90,9 +97,6 @@ li{
             margin-left: 0;
         }
     }
-}
-#left-score h4{
-    text-align: center;
 }
 h1{
     font-size: 5rem;
@@ -118,10 +122,6 @@ h5{
     font-size: 1.15rem;
     text-align: center;
     @extend %serif-font;
-}
-#right-score h3, #right-score h4{
-    margin-left: 2rem;
-    text-shadow: 5px 5px 2px $text-shadow-color, 1px 1px $text-shadow-color, 2px 2px $text-shadow-color, 3px 3px $text-shadow-color, 4px 4px $text-shadow-color;
 }
 .played-on{
     text-align: center;

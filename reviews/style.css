@@ -182,7 +182,8 @@ p, h1, h2, h3, h4, h5, h6, ul {
     margin-right: -1rem; }
   @media only screen and (max-width: 500px) {
     .review-link {
-      height: 10rem; } }
+      height: 10rem;
+      white-space: normal; } }
 
 .left-review-link {
   display: inline-block;

@@ -44,6 +44,7 @@ li{
     padding-left: 1rem;
     text-indent: -1rem;
     margin-bottom: 0.25rem;
+    text-shadow: 2px 2px 2px $text-shadow-color, 1px 1px $text-shadow-color;
     @include bp{
         padding: 0 1rem;
         text-indent: -2rem;
